@@ -327,8 +327,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 80
+        x: 223.6585
+        y: 93.41463
         width: 160
         height: 30
     - id: 2
@@ -399,8 +399,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 130
+        x: 367.56088
+        y: 154.39023
         width: 160
         height: 30
     - id: 3
@@ -470,8 +470,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 180
+        x: 619.9998
+        y: 216.58536
         width: 160
         height: 30
     - id: 4
@@ -541,8 +541,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 230
+        x: 929.7558
+        y: 262.92682
         width: 160
         height: 30
     - id: 5
@@ -607,12 +607,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 20
-        y: 280
+        x: 1283.4143
+        y: 298.2927
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.6700003
+    canvasScrollPosition: {x: 0, y: 3.281149}
+    canvasZoom: 0.79000026
   - id: 2
     fields:
     - title: Title
@@ -1232,7 +1232,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Fuck Off, can't you see i'm busy.
+        value: Uhh, can't you see i'm busy.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -1516,7 +1516,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: oh really, ok i am looking for a women with a big rack
+        value: oh really, ok i am looking for a women with a BIG "Personality"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -1554,7 +1554,7 @@ MonoBehaviour:
         y: 292
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
+    canvasScrollPosition: {x: 0, y: 20.025223}
     canvasZoom: 1
   syncInfo:
     syncActors: 0
