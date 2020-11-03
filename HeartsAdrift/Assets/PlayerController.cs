@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private GameObject otherObj;
     [SerializeField] public GameObject boat;
     [SerializeField] public Canvas canvas;
+    [SerializeField] public float playerSpeed;
 
     CharacterController characterController;
     Vector3 movement;
@@ -25,11 +26,17 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
-        Vector3 moveVector = new Vector3(transform.position.x * moveX/4, 0f, (transform.position.z) * -moveZ/4);
+        // Calculate the Direction to Move based on the tranform of the Player
+        Vector3 moveDirectionForward = transform.forward * moveZ;
+        Vector3 moveDirectionSide = transform.right * moveX;
 
-        moveVector.y -= 20.0f * Time.deltaTime;
+        //find the direction
+        Vector3 direction = (moveDirectionForward + moveDirectionSide).normalized;
+        //find the distance
+        Vector3 distance = direction * playerSpeed * Time.deltaTime;
 
-        characterController.Move(moveVector * Time.deltaTime);
+        // Apply Movement to Player
+        characterController.Move(distance);
     }
 
     private void OnTriggerEnter(Collider other)
