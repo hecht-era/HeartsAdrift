@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
 
         // Apply Movement to Player
         characterController.Move(distance);
+
         if (Input.GetKeyDown(KeyCode.E) && _isTrigger)
         {
             boat.GetComponent<boat>().ResetState();
