@@ -13,21 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-11-18T09:11:21.233-08:00
+  lastUpdatedAtString: 2020-11-18T09:18:10.248-08:00
   initializedAtString: 2020-11-17T20:20:54.452-08:00
   entries:
-  - path: Library\gfu\cache\gitlocks.yaml
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\gfu\cache\gitlocks.yaml
-    projectPath: Library\gfu\cache\gitlocks.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\gfu\cache\gitlog.yaml
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\gfu\cache\gitlog.yaml
-    projectPath: Library\gfu\cache\gitlog.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Library\gfu\cache\gitstatusentries.yaml
     fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\gfu\cache\gitstatusentries.yaml
     projectPath: Library\gfu\cache\gitstatusentries.yaml
@@ -37,12 +25,6 @@ MonoBehaviour:
   - path: Library\gfu\cache\gittrackingstatus.yaml
     fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\gfu\cache\gittrackingstatus.yaml
     projectPath: Library\gfu\cache\gittrackingstatus.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library\gfu\cache\gituser.yaml
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\gfu\cache\gituser.yaml
-    projectPath: Library\gfu\cache\gituser.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
