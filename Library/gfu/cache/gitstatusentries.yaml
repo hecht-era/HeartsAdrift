@@ -13,15 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-11-18T09:06:09.418-08:00
+  lastUpdatedAtString: 2020-11-18T09:11:21.233-08:00
   initializedAtString: 2020-11-17T20:20:54.452-08:00
   entries:
-  - path: Library\gfu\cache\branches.yaml
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\gfu\cache\branches.yaml
-    projectPath: Library\gfu\cache\branches.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Library\gfu\cache\gitlocks.yaml
     fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\gfu\cache\gitlocks.yaml
     projectPath: Library\gfu\cache\gitlocks.yaml
@@ -46,183 +40,21 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Library\gfu\cache\gituser.yaml
+    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\gfu\cache\gituser.yaml
+    projectPath: Library\gfu\cache\gituser.yaml
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library\SourceAssetDB
     fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\SourceAssetDB
     projectPath: Library\SourceAssetDB
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Temp\input-43e782dba0da80b448a4259063783ee6.unwrap
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\input-43e782dba0da80b448a4259063783ee6.unwrap
-    projectPath: Temp\input-43e782dba0da80b448a4259063783ee6.unwrap
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\input-7b30d0667ab4bba46a71e571080213a0.unwrap
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\input-7b30d0667ab4bba46a71e571080213a0.unwrap
-    projectPath: Temp\input-7b30d0667ab4bba46a71e571080213a0.unwrap
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\output-cc3acf0c2f294894e8000b79b0a012e0.unwrap
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\output-cc3acf0c2f294894e8000b79b0a012e0.unwrap
-    projectPath: Temp\output-cc3acf0c2f294894e8000b79b0a012e0.unwrap
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\output-e2ec1e93d12917a4ca5ed68dc1387509.unwrap
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\output-e2ec1e93d12917a4ca5ed68dc1387509.unwrap
-    projectPath: Temp\output-e2ec1e93d12917a4ca5ed68dc1387509.unwrap
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Temp\UnityLockfile
     fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityLockfile
     projectPath: Temp\UnityLockfile
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-0a0448167a9dd4a41bdfdd70946e2073
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-0a0448167a9dd4a41bdfdd70946e2073
-    projectPath: Temp\UnityTempFile-0a0448167a9dd4a41bdfdd70946e2073
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-0d4351a38cec3e3448362ae68895d287
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-0d4351a38cec3e3448362ae68895d287
-    projectPath: Temp\UnityTempFile-0d4351a38cec3e3448362ae68895d287
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-1d2f3cff631c08743a39cb006c845fe7
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-1d2f3cff631c08743a39cb006c845fe7
-    projectPath: Temp\UnityTempFile-1d2f3cff631c08743a39cb006c845fe7
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-1e8d1c69a489c6b4588d7a0b85a14fde
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-1e8d1c69a489c6b4588d7a0b85a14fde
-    projectPath: Temp\UnityTempFile-1e8d1c69a489c6b4588d7a0b85a14fde
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-2bc8af25803c1c64e9bac46c0986636a
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-2bc8af25803c1c64e9bac46c0986636a
-    projectPath: Temp\UnityTempFile-2bc8af25803c1c64e9bac46c0986636a
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-37deea788d261af41857aaf0dc6000c0
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-37deea788d261af41857aaf0dc6000c0
-    projectPath: Temp\UnityTempFile-37deea788d261af41857aaf0dc6000c0
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-3a6529f46a15ab84b9b00ef6874da3ef
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-3a6529f46a15ab84b9b00ef6874da3ef
-    projectPath: Temp\UnityTempFile-3a6529f46a15ab84b9b00ef6874da3ef
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-3f8f7577c3c0055408eda6b2fea0d0c0
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-3f8f7577c3c0055408eda6b2fea0d0c0
-    projectPath: Temp\UnityTempFile-3f8f7577c3c0055408eda6b2fea0d0c0
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-44bcec7ad4bf98545b57e30b781dafdf
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-44bcec7ad4bf98545b57e30b781dafdf
-    projectPath: Temp\UnityTempFile-44bcec7ad4bf98545b57e30b781dafdf
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-44bf8a61b1fef474993eae46544e59d3
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-44bf8a61b1fef474993eae46544e59d3
-    projectPath: Temp\UnityTempFile-44bf8a61b1fef474993eae46544e59d3
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-4b61204e7122ac740a0d9bc762ad5ebb
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-4b61204e7122ac740a0d9bc762ad5ebb
-    projectPath: Temp\UnityTempFile-4b61204e7122ac740a0d9bc762ad5ebb
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-7b3f9c1c62ccc774a8f5be3f3457d7d8
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-7b3f9c1c62ccc774a8f5be3f3457d7d8
-    projectPath: Temp\UnityTempFile-7b3f9c1c62ccc774a8f5be3f3457d7d8
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-90db9cd49c35502488c48188f4088d35
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-90db9cd49c35502488c48188f4088d35
-    projectPath: Temp\UnityTempFile-90db9cd49c35502488c48188f4088d35
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-a56bae9e8c1857c49865a47f31102966
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-a56bae9e8c1857c49865a47f31102966
-    projectPath: Temp\UnityTempFile-a56bae9e8c1857c49865a47f31102966
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-b08074effe3d87147be7865bb5ea084e
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-b08074effe3d87147be7865bb5ea084e
-    projectPath: Temp\UnityTempFile-b08074effe3d87147be7865bb5ea084e
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-b673d903a22f0364eb487319d930c6f1
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-b673d903a22f0364eb487319d930c6f1
-    projectPath: Temp\UnityTempFile-b673d903a22f0364eb487319d930c6f1
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-c4f63c2392c8aa841b7e2be9651fdd2c
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-c4f63c2392c8aa841b7e2be9651fdd2c
-    projectPath: Temp\UnityTempFile-c4f63c2392c8aa841b7e2be9651fdd2c
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-cb0a10f2e4337a341b249fabf6678066
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-cb0a10f2e4337a341b249fabf6678066
-    projectPath: Temp\UnityTempFile-cb0a10f2e4337a341b249fabf6678066
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-d1c68f1df7f4f394e8ef5c7029d9357d
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-d1c68f1df7f4f394e8ef5c7029d9357d
-    projectPath: Temp\UnityTempFile-d1c68f1df7f4f394e8ef5c7029d9357d
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-d9a843d5f6c2a054a86740e4b0ddce5a
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-d9a843d5f6c2a054a86740e4b0ddce5a
-    projectPath: Temp\UnityTempFile-d9a843d5f6c2a054a86740e4b0ddce5a
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-da1330af73b7dbe44bfa1fd2bf77e35f
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-da1330af73b7dbe44bfa1fd2bf77e35f
-    projectPath: Temp\UnityTempFile-da1330af73b7dbe44bfa1fd2bf77e35f
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-e6d124a301f3b2844815ab8dfcb2b964
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-e6d124a301f3b2844815ab8dfcb2b964
-    projectPath: Temp\UnityTempFile-e6d124a301f3b2844815ab8dfcb2b964
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-ee8cd3560f9f4c0498f3b40f836d8c06
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-ee8cd3560f9f4c0498f3b40f836d8c06
-    projectPath: Temp\UnityTempFile-ee8cd3560f9f4c0498f3b40f836d8c06
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Temp\UnityTempFile-fb6ef3f956a283d4c9debd13f5cb4827
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\UnityTempFile-fb6ef3f956a283d4c9debd13f5cb4827
-    projectPath: Temp\UnityTempFile-fb6ef3f956a283d4c9debd13f5cb4827
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
