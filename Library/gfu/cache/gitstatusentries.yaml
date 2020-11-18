@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-11-18T09:00:49.264-08:00
+  lastUpdatedAtString: 2020-11-18T09:06:09.418-08:00
   initializedAtString: 2020-11-17T20:20:54.452-08:00
   entries:
   - path: Library\gfu\cache\branches.yaml
@@ -46,150 +46,12 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library\ShaderCache\4\438c9068b7ae7cc2fc2ac75804f2467a.bin
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\ShaderCache\4\438c9068b7ae7cc2fc2ac75804f2467a.bin
-    projectPath: Library\ShaderCache\4\438c9068b7ae7cc2fc2ac75804f2467a.bin
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library\ShaderCache\9\9fbece46774a2140f096fdf5adf2f9bf.bin
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\ShaderCache\9\9fbece46774a2140f096fdf5adf2f9bf.bin
-    projectPath: Library\ShaderCache\9\9fbece46774a2140f096fdf5adf2f9bf.bin
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Library\SourceAssetDB
     fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Library\SourceAssetDB
     projectPath: Library\SourceAssetDB
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Packages\manifest.json
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Packages\manifest.json
-    projectPath: Packages\manifest.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Packages\packages-lock.json
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Packages\packages-lock.json
-    projectPath: Packages\packages-lock.json
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\AudioManager.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\AudioManager.asset
-    projectPath: ProjectSettings\AudioManager.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\ClusterInputManager.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\ClusterInputManager.asset
-    projectPath: ProjectSettings\ClusterInputManager.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\DynamicsManager.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\DynamicsManager.asset
-    projectPath: ProjectSettings\DynamicsManager.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\EditorBuildSettings.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\EditorBuildSettings.asset
-    projectPath: ProjectSettings\EditorBuildSettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\EditorSettings.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\EditorSettings.asset
-    projectPath: ProjectSettings\EditorSettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\GraphicsSettings.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\GraphicsSettings.asset
-    projectPath: ProjectSettings\GraphicsSettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\InputManager.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\InputManager.asset
-    projectPath: ProjectSettings\InputManager.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\NavMeshAreas.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\NavMeshAreas.asset
-    projectPath: ProjectSettings\NavMeshAreas.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\Physics2DSettings.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\Physics2DSettings.asset
-    projectPath: ProjectSettings\Physics2DSettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\PresetManager.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\PresetManager.asset
-    projectPath: ProjectSettings\PresetManager.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\ProjectSettings.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\ProjectSettings.asset
-    projectPath: ProjectSettings\ProjectSettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\ProjectVersion.txt
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\ProjectVersion.txt
-    projectPath: ProjectSettings\ProjectVersion.txt
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\QualitySettings.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\QualitySettings.asset
-    projectPath: ProjectSettings\QualitySettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\TagManager.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\TagManager.asset
-    projectPath: ProjectSettings\TagManager.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\TimeManager.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\TimeManager.asset
-    projectPath: ProjectSettings\TimeManager.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\UnityConnectSettings.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\UnityConnectSettings.asset
-    projectPath: ProjectSettings\UnityConnectSettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\URPProjectSettings.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\URPProjectSettings.asset
-    projectPath: ProjectSettings\URPProjectSettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\VFXManager.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\VFXManager.asset
-    projectPath: ProjectSettings\VFXManager.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ProjectSettings\XRSettings.asset
-    fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\ProjectSettings\XRSettings.asset
-    projectPath: ProjectSettings\XRSettings.asset
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Temp\input-43e782dba0da80b448a4259063783ee6.unwrap
     fullPath: C:\Users\Thanatos\OneDrive\Desktop\HeartsAdrift-Dialogue-V2\HeartsAdrift-Dialogue-V2\HeartsAdrift\Temp\input-43e782dba0da80b448a4259063783ee6.unwrap
     projectPath: Temp\input-43e782dba0da80b448a4259063783ee6.unwrap
