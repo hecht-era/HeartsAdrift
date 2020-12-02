@@ -1,111 +1,148 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimeCycle : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static TimeCycle Instance;
+    [SerializeField] Text displayClock;
+
+    [HideInInspector] public float hours;
+    [HideInInspector] public float minutes;
+
     Light sun;
-    Light moon;
-    float duration;
-    int timeOfDay;
     Color dawn;
     Color night;
-    bool isNight;
-    bool isNoon;
     Color color1;
     Color color2;
+    int clock;
+    int day;
+    static Quaternion DAWN = Quaternion.Euler(new Vector3(0, 180, 180));
+    static Quaternion NOON = Quaternion.Euler(new Vector3(90, 180, 180));
+    static Quaternion DUSK = Quaternion.Euler(new Vector3(180, 180, 180));
+    static Quaternion MIDNIGHT = Quaternion.Euler(new Vector3(270, 180, 180));
+    static Quaternion NEWDAY = Quaternion.Euler(new Vector3(360, 180, 180));
+    Quaternion lastRotation;
+    Quaternion targetRotation;
+    float countdown;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
         sun = transform.GetChild(0).GetComponent<Light>();
-        moon = transform.GetChild(1).GetComponent<Light>();
-        duration = 0f;
-        timeOfDay = 0;
         dawn[0] = 1;
         dawn[1] = 0.7333333f;
         dawn[2] = 0.07058824f;
         night[0] = 0.4404593f;
         night[1] = 0.8286127f;
         night[2] = 0.9245283f;
-        isNight = false;
-        isNoon = false;
+        clock = 0;
+        day = 0;
+        lastRotation = DAWN;
+        transform.rotation = DAWN;
+        targetRotation = DAWN;
+        countdown = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.Euler(180 - transform.rotation.x - Time.time * 8, 90, 0);
-        Vector3 angle = transform.eulerAngles;
-        
-        if (!isNight)
-        {
-            if (angle.x >= 0 && angle.x < 5f && !isNoon)
-            {
-                if (timeOfDay == 0)
-                {
-                    duration = 0f;
-                    timeOfDay++;
-                    Debug.Log("Dawn");
-                }
-                color1 = night;
-                color2 = dawn;
+        DisplayTime(transform.rotation.eulerAngles.x);
 
-            }
-            else if (angle.x >= 5f && angle.x <= 90f)
+        RotateSun();
+
+        sun.color = Color.Lerp(color1, color2, countdown / 15);
+    }
+
+    private void RotateSun()
+    {
+        if (transform.rotation == targetRotation)
+        {
+            if (targetRotation == DAWN || targetRotation == NEWDAY)
             {
-                if (timeOfDay == 1 && !isNoon)
-                {
-                    duration = 0f;
-                    timeOfDay++;
-                    Debug.Log("Day");
-                    isNoon = true;
-                }
+                //Debug.Log("DAWN");
                 color1 = dawn;
                 color2 = Color.white;
+                targetRotation = NOON;
+                lastRotation = DAWN;
+                transform.GetChild(0).gameObject.SetActive(true);
+                clock = 0;
+                day++;
             }
-            else if (angle.x >= 0f && angle.x < 5f && isNoon)
+            else if (targetRotation == NOON)
             {
-                if (timeOfDay == 2)
-                {
-                    duration = 0f;
-                    timeOfDay++;
-                    Debug.Log("Dusk");
-                }
+                //Debug.Log("NOON");
                 color1 = Color.white;
                 color2 = dawn;
+                targetRotation = DUSK;
+                lastRotation = NOON;
+                clock = 1;
             }
-            else if (angle.x > 355f && angle.x <= 359f)
+            else if (targetRotation == DUSK)
             {
-                isNight = true;
-            }
-        }
-        
-
-        else if (isNight)
-        {
-            if (timeOfDay == 3)
-            {
+                //Debug.Log("DUSK");
+                targetRotation = MIDNIGHT;
+                lastRotation = DUSK;
                 transform.GetChild(0).gameObject.SetActive(false);
-                duration = 0f;
-                Debug.Log("Night");
-                timeOfDay = 0;
+                clock = 2;
             }
-            color1 = dawn;
-            color2 = night;
-
-            if (angle.x >= 355f && angle.x < 360f && sun.color == night)
+            else if (targetRotation == MIDNIGHT)
             {
-                Debug.Log("New Day");
-                transform.GetChild(0).gameObject.SetActive(true);
-                isNight = false;
-                isNoon = false;
-                timeOfDay = 0;
+                //Debug.Log("MIDNIGHT");
+                targetRotation = NEWDAY;
+                lastRotation = MIDNIGHT;
+                clock = 3;
             }
+            countdown = 0f;
         }
-        duration += Time.deltaTime / 4;
-        sun.color = Color.Lerp(color1, color2, duration);
-        transform.localEulerAngles = angle;
+        countdown += Time.deltaTime;
+        transform.rotation = Quaternion.Lerp(lastRotation, targetRotation, countdown / 60);
+    }
+
+    void DisplayTime(float timeToDisplay)
+    {
+        //Debug.Log(timeToDisplay);
+        timeToDisplay %= 360;
+        switch (clock)
+        {
+            case 0:                                  //(06:00 - 12:00) (Angle 0 - 90)
+                timeToDisplay += 90f;
+                break;
+            case 1:
+                timeToDisplay = 270f - timeToDisplay; //(12:00 - 18:00) (Angle 90 - 0)
+                break;
+            case 2:
+                timeToDisplay = 630f - timeToDisplay; //(18:00 - 23:59) (Angle 360 - 270)
+                break;
+            case 3:
+                timeToDisplay -= 270f;                //(00:00 - 06:00) (Angle 270 - 360)
+                break;
+            default:
+                break;
+        }       
+
+        timeToDisplay *= 4f;
+
+        hours = Mathf.FloorToInt(timeToDisplay / 60);
+        minutes = Mathf.FloorToInt(timeToDisplay % 60);
+
+        string time = string.Format("{0:00}:{1:00}", hours, minutes);
+        displayClock.text = "Day " + day + ", " + time;
+        //Debug.Log(time);
+    }
+
+    public float GetHours()
+    {
+        return hours;
+    }
+
+    public float GetMinutes()
+    {
+        return minutes;
     }
 }
