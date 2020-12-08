@@ -28,23 +28,18 @@ public class boat : MonoBehaviour
     [SerializeField] public GameObject map;
     [SerializeField] public GameObject frontFace;
 
-    private bool _dockProcedure = false;
-
     private bool _isHighlighted;
     private GameObject _hitBook;
     private GameObject _hitMap;
-    private Vector3 _bookScale;
     private bool _inTrigger;
 
     void Start()
     {
         _rBody = GetComponent<Rigidbody>();
         _state = StateManager.Instance.GetState();
-        //_state = boatState.SAILING;
         _isHighlighted = false;
         _hitBook = null;
         _hitMap = null;
-        //_bookScale = camFront.transform.localScale;
         _inTrigger = false;
     }
 
@@ -66,7 +61,7 @@ public class boat : MonoBehaviour
             Quaternion compassRotation = deltaRotation;
             compassRotation.x = compass.transform.rotation.x;
             compassRotation.z = compass.transform.rotation.z;
-            compassRotation.y -= 16.5f; //stupid quaternions
+            compassRotation.y += 1.3f; //stupid quaternions
             compass.transform.rotation = compassRotation;
         }
     }
@@ -172,25 +167,25 @@ public class boat : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E) && StateManager.Instance.GetState() == GameState.SAILING)
             {
-                canvas.transform.GetChild(2).gameObject.SetActive(false);
-                canvas.transform.GetChild(3).gameObject.SetActive(true);
+                canvas.transform.GetChild(0).gameObject.SetActive(false);
+                canvas.transform.GetChild(1).gameObject.SetActive(true);
                 StateManager.Instance.SetState(GameState.DOCKING);
                 _lastState = GameState.SAILING;
             }
             if (Input.GetKeyDown(KeyCode.R) && StateManager.Instance.GetState() == GameState.DOCKED)
             {
-                canvas.transform.GetChild(3).gameObject.SetActive(false);
-                canvas.transform.GetChild(2).gameObject.SetActive(true);
+                canvas.transform.GetChild(1).gameObject.SetActive(false);
+                canvas.transform.GetChild(0).gameObject.SetActive(true);
                 StateManager.Instance.SetState(GameState.UNDOCKING);
                 //_lastState = GameState.DOCKED;
             }
             if (Input.GetKeyDown(KeyCode.E) && StateManager.Instance.GetState() == GameState.DOCKED && _lastState != GameState.WALKING)
             {
-                canvas.transform.GetChild(3).gameObject.SetActive(false);
-                canvas.transform.GetChild(2).gameObject.SetActive(false);
+                canvas.transform.GetChild(1).gameObject.SetActive(false);
+                canvas.transform.GetChild(0).gameObject.SetActive(false);
                 cam.transform.position = crow.position;
-                player.transform.position = _otherObj.transform.parent.GetChild(12).position;
-                player.transform.rotation = _otherObj.transform.parent.GetChild(12).rotation;
+                player.transform.position = _otherObj.transform.parent.GetChild(0).position;
+                player.transform.rotation = _otherObj.transform.parent.GetChild(0).rotation;
                 player.gameObject.SetActive(true);
                 StateManager.Instance.SetState(GameState.WALKING);
                 player.transform.SetParent(null);
@@ -204,7 +199,7 @@ public class boat : MonoBehaviour
     {
         if(other.tag == "Docking"  && StateManager.Instance.GetState() == GameState.SAILING)
         {
-            canvas.transform.GetChild(2).gameObject.SetActive(true);
+            canvas.transform.GetChild(0).gameObject.SetActive(true);
         }
         if(other.tag == "Exit" && StateManager.Instance.GetState() == GameState.UNDOCKING)
         {
@@ -217,7 +212,7 @@ public class boat : MonoBehaviour
     {
         if (other.tag == "Docking")
         {
-            canvas.transform.GetChild(2).gameObject.SetActive(false);
+            canvas.transform.GetChild(0).gameObject.SetActive(false);
             _inTrigger = false;
         }
     }
@@ -239,9 +234,9 @@ public class boat : MonoBehaviour
         player.SetActive(false);
         //StartCoroutine(WaitForDocked());
         StateManager.Instance.SetState(GameState.DOCKED);
-        canvas.transform.GetChild(3).gameObject.SetActive(true);
+        canvas.transform.GetChild(1).gameObject.SetActive(true);
+        canvas.transform.GetChild(0).gameObject.SetActive(false);
         canvas.transform.GetChild(2).gameObject.SetActive(false);
-        canvas.transform.GetChild(4).gameObject.SetActive(false);
         _lastState = GameState.WALKING;
     }
 

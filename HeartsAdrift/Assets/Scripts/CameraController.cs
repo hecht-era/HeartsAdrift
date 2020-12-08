@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     private Vector2 rotation = Vector2.zero;
     public void Update() // Look rotation (UP down is Camera) (Left right is Transform rotation)
     {
-        if(StateManager.Instance.GetState() != GameState.READING)
+        if (StateManager.Instance.GetState() != GameState.READING && Time.timeScale != 0)
         {
             rotation.y += Input.GetAxis("Mouse X");
             rotation.x += -Input.GetAxis("Mouse Y");
