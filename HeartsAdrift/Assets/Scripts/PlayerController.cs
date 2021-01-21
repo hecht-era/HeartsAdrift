@@ -20,13 +20,10 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
-    private bool _isTrigger;
-
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
-        _isTrigger = false;
     }
 
     void Update()
@@ -56,26 +53,30 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && _isTrigger)
-        {
-            boat.GetComponent<boat>().ResetState();
-            _isTrigger = false;
-        }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        canvas.transform.GetChild(2).gameObject.SetActive(true);
+        if(other.tag == "Embark")
+            canvas.transform.GetChild(2).gameObject.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        canvas.transform.GetChild(2).gameObject.SetActive(false);
+        if(other.tag == "Embark")
+            canvas.transform.GetChild(2).gameObject.SetActive(false);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        canvas.transform.GetChild(2).gameObject.SetActive(true);
-        _isTrigger = true;
+        if(other.tag == "Embark")
+        {
+            canvas.transform.GetChild(2).gameObject.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                boat.GetComponent<boat>().ResetState();
+            }
+        }
     }
 }

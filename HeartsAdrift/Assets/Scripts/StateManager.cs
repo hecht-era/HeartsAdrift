@@ -10,7 +10,8 @@ public enum GameState
     UNDOCKING,
     DOCKED,
     WALKING,
-    READING
+    READING,
+    TREASURE
 }
 public class StateManager : MonoBehaviour
 {

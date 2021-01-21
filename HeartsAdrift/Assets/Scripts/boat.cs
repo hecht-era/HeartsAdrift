@@ -27,20 +27,32 @@ public class boat : MonoBehaviour
     [SerializeField] public GameObject mapPos;
     [SerializeField] public GameObject map;
     [SerializeField] public GameObject frontFace;
+    [SerializeField] public GameObject crane;
+    [SerializeField] public GameObject tether;
+    [SerializeField] public LineRenderer rope;
 
     private bool _isHighlighted;
     private GameObject _hitBook;
     private GameObject _hitMap;
     private bool _inTrigger;
+    private bool _isTreasure;
+    private bool _gotTreasure;
+    private bool _pickUpTreasure;
+
+    private Vector3 _treasureTarget;
 
     void Start()
     {
         _rBody = GetComponent<Rigidbody>();
+        rope = rope.GetComponent<LineRenderer>();
         _state = StateManager.Instance.GetState();
         _isHighlighted = false;
         _hitBook = null;
         _hitMap = null;
         _inTrigger = false;
+        _isTreasure = false;
+        _gotTreasure = false;
+        _pickUpTreasure = false;
     }
 
     void FixedUpdate()
@@ -67,7 +79,7 @@ public class boat : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(StateManager.Instance.GetState());
+        //Debug.Log(StateManager.Instance.GetState());
 
         //Cast a ray forward and highlight interactable object
         RaycastHit hit;
@@ -101,24 +113,45 @@ public class boat : MonoBehaviour
         }
         else if (_isHighlighted)
         {
-            if(_hitBook != null)
+            if (_hitBook != null)
                 _hitBook.GetComponent<Highlight>().RemoveHighlight();
-            if(_hitMap != null)
+            if (_hitMap != null)
                 _hitMap.GetComponent<Highlight>().RemoveHighlight();
             _isHighlighted = false;
             _hitBook = null;
             _hitMap = null;
         }
 
+        if (_isTreasure)
+        {
+            GatherTreasure();
+        }
+        if (_pickUpTreasure)
+        {
+            _pickUpTreasure = false;
+            _isTreasure = false;
+            crane.GetComponent<Treasure>().TreasureDone();
+            _otherObj.SetActive(false);
+            StateManager.Instance.SetState(GameState.SAILING);
+        }
+        
+        Vector3[] points = new Vector3[2];
+        points[0] = tether.transform.position;
+        points[1] = crane.transform.position;
+        rope.SetPositions(points);
 
+        StateHandler();
+    }
 
+    private void StateHandler()
+    {
         if (StateManager.Instance.GetState() == GameState.DOCKING)
         {
             transform.position = Vector3.MoveTowards(transform.position, _otherObj.transform.position, Time.deltaTime * 2);
             transform.forward = Vector3.RotateTowards(transform.forward, _otherObj.transform.right * -1, Time.deltaTime / 2, Time.deltaTime / 2);
-            if(transform.position == _otherObj.transform.position && transform.forward == _otherObj.transform.right * -1)
+            if (transform.position == _otherObj.transform.position && transform.forward == _otherObj.transform.right * -1)
             {
-                StateManager.Instance.SetState(GameState.DOCKED); 
+                StateManager.Instance.SetState(GameState.DOCKED);
             }
         }
         if (StateManager.Instance.GetState() == GameState.UNDOCKING)
@@ -127,7 +160,7 @@ public class boat : MonoBehaviour
         }
         if (StateManager.Instance.GetState() == GameState.READING)
         {
-            if(_hitBook != null)
+            if (_hitBook != null)
             {
                 book.GetComponent<Highlight>().RemoveHighlight();
                 book.transform.position = Vector3.MoveTowards(book.transform.position, frontFace.transform.position, 1.1f * Time.deltaTime);
@@ -139,7 +172,7 @@ public class boat : MonoBehaviour
                     _lastState = GameState.READING;
                 }
             }
-            if(_hitMap != null)
+            if (_hitMap != null)
             {
                 map.GetComponent<Highlight>().RemoveHighlight();
                 map.transform.position = Vector3.MoveTowards(map.transform.position, frontFace.transform.position, 1f * Time.deltaTime);
@@ -152,7 +185,7 @@ public class boat : MonoBehaviour
                 }
             }
         }
-        if(_lastState == GameState.READING)
+        if (_lastState == GameState.READING)
         {
             book.transform.position = Vector3.MoveTowards(book.transform.position, bookPos.transform.position, 1f * Time.deltaTime);
             book.transform.forward = Vector3.RotateTowards(book.transform.forward, bookPos.transform.forward, .01f, .01f);
@@ -167,9 +200,21 @@ public class boat : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E) && StateManager.Instance.GetState() == GameState.SAILING)
             {
-                canvas.transform.GetChild(0).gameObject.SetActive(false);
-                canvas.transform.GetChild(1).gameObject.SetActive(true);
-                StateManager.Instance.SetState(GameState.DOCKING);
+                Debug.Log(_otherObj.tag);
+                if (_otherObj.tag == "Treasure")
+                {
+                    _rBody.velocity = new Vector3(0, 0, 0);
+                    StateManager.Instance.SetState(GameState.TREASURE);
+                    _treasureTarget = new Vector3(crane.transform.position.x, crane.transform.position.y - 6f, crane.transform.position.z);
+                    _isTreasure = true;
+                }
+                else
+                {
+                    canvas.transform.GetChild(0).gameObject.SetActive(false);
+                    canvas.transform.GetChild(1).gameObject.SetActive(true);
+                    StateManager.Instance.SetState(GameState.DOCKING);
+                }
+
                 _lastState = GameState.SAILING;
             }
             if (Input.GetKeyDown(KeyCode.R) && StateManager.Instance.GetState() == GameState.DOCKED)
@@ -219,9 +264,10 @@ public class boat : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Docking")
+        //if(other.tag == "Docking")
             _inTrigger = true;
         _otherObj = other.gameObject;
+
     }
 
     public void ResetState()
@@ -249,5 +295,24 @@ public class boat : MonoBehaviour
     {
         StateManager.Instance.SetState(GameState.DOCKED);
         yield return new WaitForSeconds(1);
+    }
+
+    private void GatherTreasure()
+    {
+        Vector3 returnTreasure = new Vector3(_treasureTarget.x, _treasureTarget.y + 6f, _treasureTarget.z);
+
+        if(!_gotTreasure)
+            crane.transform.position = Vector3.MoveTowards(crane.transform.position, _treasureTarget, 0.005f);
+        else
+            crane.transform.position = Vector3.MoveTowards(crane.transform.position, returnTreasure, 0.005f);
+        if (crane.transform.position == _treasureTarget)
+        {
+            _gotTreasure = crane.GetComponent<Treasure>().CollectTreasure();
+        }
+        if(_gotTreasure && crane.transform.position == returnTreasure)
+        {
+            Debug.Log("test");
+            _pickUpTreasure = true;
+        }
     }
 }

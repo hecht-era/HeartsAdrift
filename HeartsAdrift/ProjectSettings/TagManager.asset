@@ -8,6 +8,7 @@ TagManager:
   - Exit
   - Book
   - Map
+  - Treasure
   layers:
   - Default
   - TransparentFX
