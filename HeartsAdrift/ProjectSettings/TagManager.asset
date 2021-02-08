@@ -9,6 +9,7 @@ TagManager:
   - Book
   - Map
   - Treasure
+  - Embark
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Player
   - Ocean
   - Interactable
-  - 
+  - Journal
   - 
   - 
   - 
