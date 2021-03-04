@@ -8,6 +8,7 @@ public class TimeCycle : MonoBehaviour
     public static TimeCycle Instance;
     [SerializeField] Text displayClock;
     [SerializeField] float sunSpeed;
+    [SerializeField] GameObject skies;
 
     [HideInInspector] public float hours;
     [HideInInspector] public float minutes;
@@ -54,15 +55,21 @@ public class TimeCycle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        DisplayTime(transform.rotation.eulerAngles.x);
-
+        float movement = DisplayTime(transform.rotation.eulerAngles.x);
         RotateSun();
-        if(targetRotation == DUSK)
+        if(movement >= 12)
+        {
+            skies.GetComponent<PolyverseSkies>().timeOfDay = movement/12 - 1;
+        }
+        else
+            skies.GetComponent<PolyverseSkies>().timeOfDay = 1 - movement/12;
+
+        /*if(targetRotation == DUSK)
         {
             sun.color = Color.Lerp(color1, color2, countdown / (60 / (sunSpeed * .8f)));
         }
         else
-            sun.color = Color.Lerp(color1, color2, countdown / (60 / (sunSpeed * 4)));
+            sun.color = Color.Lerp(color1, color2, countdown / (60 / (sunSpeed * 4)));*/
     }
 
     private void RotateSun()
@@ -119,7 +126,7 @@ public class TimeCycle : MonoBehaviour
         transform.rotation = Quaternion.Lerp(lastRotation, targetRotation, countdown / (60 / sunSpeed));
     }
 
-    void DisplayTime(float timeToDisplay)
+    float DisplayTime(float timeToDisplay)
     {
         //Debug.Log(timeToDisplay);
         timeToDisplay %= 360;
@@ -148,7 +155,7 @@ public class TimeCycle : MonoBehaviour
 
         string time = string.Format("{0:00}:{1:00}", hours, minutes);
         displayClock.text = "Day " + day + ", " + time;
-        //Debug.Log(time);
+        return timeToDisplay / 60;
     }
 
     public float GetHours()

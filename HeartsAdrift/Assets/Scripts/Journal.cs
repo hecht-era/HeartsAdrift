@@ -111,9 +111,6 @@ public class Journal : MonoBehaviour
         p10.Add("Likes3");
         p10.Add("Job");
         journalData.Add(9, p10);
-        for (int i = 0; i < 10; i++)
-            for (int j = 0; j < 6; j++)
-                Debug.Log(journalData[i][j]);
     }
 
     // Update is called once per frame
