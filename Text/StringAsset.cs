@@ -2,19 +2,31 @@
 
 using UnityEngine;
 
-namespace PixelCrushers.Wrappers
+namespace PixelCrushers
 {
 
-#if !(UNITY_4_6 || UNITY_4_7 || UNITY_5_0)
-    [CreateAssetMenu(menuName = "Pixel Crushers/Common/Text/String Asset")]
-#endif
     /// <summary>
-    /// This wrapper for PixelCrushers.StringAsset keeps references intact if you
-    /// switch between the compiled assembly and source code versions of the original
-    /// class.
+    /// A StringAsset is a ScriptableObject that encapsulates a string. It's useful
+    /// to share references to a string, where the value of that string can change.
     /// </summary>
-    public class StringAsset : PixelCrushers.StringAsset
+    public class StringAsset : ScriptableObject
     {
+
+        [TextArea]
+        [SerializeField]
+        private string m_text;
+
+        public string text
+        {
+            get { return m_text; }
+            set { m_text = value; }
+        }
+
+        public override string ToString()
+        {
+            return text;
+        }
+
     }
 
 }
