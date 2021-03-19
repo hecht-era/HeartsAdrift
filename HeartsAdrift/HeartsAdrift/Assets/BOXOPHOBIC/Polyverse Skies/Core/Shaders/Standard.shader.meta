@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 6fc9318f5193c094c98c0d450cd61e3b
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _BackgroundCubemap: {instanceID: 0}
+  - _PatternCubemap: {fileID: 8900000, guid: 3845b30ba2fbdee44a85e5ead4dd2974, type: 3}
+  - _StarsCubemap: {fileID: 8900000, guid: 2410ceb2200b01a4cad9ef3c253b8a5a, type: 3}
+  - _TwinklingTexture: {instanceID: 0}
+  - _SunTexture: {fileID: 2800000, guid: dd566660fc358aa4098080e42ca0db56, type: 3}
+  - _MoonTexture: {fileID: 2800000, guid: e80870b385adcae48871133b9b5759dd, type: 3}
+  - _CloudsCubemap: {fileID: 8900000, guid: ee7bf433ad404fe4cb5e19b8a93b3bed, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
