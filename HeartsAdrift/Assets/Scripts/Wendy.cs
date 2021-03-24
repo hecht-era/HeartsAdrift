@@ -43,15 +43,15 @@ public class Wendy : MonoBehaviour
                 agent.destination = waypoint1.position;
                 revert = false;
             }
-            if (agent.velocity == new Vector3(0f, 0f, 0f))
-            {
-                anim.SetBool("isWalking", false);
-            }
+        }
+        if (agent.velocity == new Vector3(0f, 0f, 0f)) // Triggers Idle
+        {
+            anim.SetBool("isWalking", false);
+        }
 
-            else
-            {
-                anim.SetBool("isWalking", true);
-            }
+        else // Triggers Walking
+        {
+            anim.SetBool("isWalking", true);
         }
     }
 }
