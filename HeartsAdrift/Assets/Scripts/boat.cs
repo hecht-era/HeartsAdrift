@@ -38,6 +38,7 @@ public class boat : MonoBehaviour
     private bool _isTreasure;
     private bool _gotTreasure;
     private bool _pickUpTreasure;
+    private bool _isAutoSail;
 
     private Vector3 _treasureTarget;
 
@@ -53,6 +54,7 @@ public class boat : MonoBehaviour
         _isTreasure = false;
         _gotTreasure = false;
         _pickUpTreasure = false;
+        _isAutoSail = false;
     }
 
     void FixedUpdate()
@@ -61,7 +63,18 @@ public class boat : MonoBehaviour
         {
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
-            Vector3 m_EulerAngleVelocity = new Vector3(0f, h * turnSpeed * Time.deltaTime, 0f);
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                _isAutoSail = !_isAutoSail;
+            }
+            if (_isAutoSail)
+            {
+                if (Input.GetAxis("Vertical") == 0)
+                    v = 1;
+                else
+                    _isAutoSail = false;
+            }
+                Vector3 m_EulerAngleVelocity = new Vector3(0f, h * turnSpeed * Time.deltaTime, 0f);
             Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
 
             if (StateManager.Instance.GetState() == GameState.SAILING)
