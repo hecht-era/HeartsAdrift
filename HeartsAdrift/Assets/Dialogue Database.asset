@@ -492,7 +492,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Trackable
-      value: True
+      value: False
       type: 2
       typeString: CustomFieldType_Boolean
   - id: 7
@@ -526,6 +526,10 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     - title: Trackable
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Track
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
@@ -2572,10 +2576,7 @@ MonoBehaviour:
         Variable["Alert"]="Wendy''s
         Love"
 
-        Variable["HaveMailForFred"] = true;;
-
-        Item["Wendy''s_Profile"].State
-        = ""'
+        Variable["HaveMailForFred"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12283,7 +12284,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 583
-        y: 288
+        y: 285.82605
         width: 160
         height: 30
     - id: 5
@@ -12346,10 +12347,10 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: '(Variable["WendyMailDelivered"] = true)
+      userScript: 'Variable["WendyMailDelivered"] = true
 
-        (Variable["HaveMailForFred"]
-        = false)'
+        Variable["HaveMailForFred"]
+        = false'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12413,7 +12414,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: (Variable["HaveMailForFred"] == false)
+      conditionsString: Variable["HaveMailForFred"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -12425,7 +12426,7 @@ MonoBehaviour:
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8800001
+    canvasZoom: 0.4600004
   - id: 4
     fields:
     - title: Title
@@ -12895,7 +12896,7 @@ MonoBehaviour:
         destinationDialogueID: 14
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["WendyMailDelivered"] == true)
+      conditionsString: Variable["WendyMailDelivered"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13110,7 +13111,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: (Variable["ShowPeteToWendy"]=true)
+      userScript: Variable["ShowPeteToWendy"]=true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13175,7 +13176,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: (Variable["WendyMailDelivered"] == false)
+      conditionsString: Variable["WendyMailDelivered"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13186,8 +13187,8 @@ MonoBehaviour:
         y: 389.59793
         width: 160
         height: 30
-    canvasScrollPosition: {x: 37.697456, y: 401.86667}
-    canvasZoom: 0.73000026
+    canvasScrollPosition: {x: 483.8809, y: 217.0232}
+    canvasZoom: 0.34000045
   - id: 21
     fields:
     - title: Title
@@ -14338,7 +14339,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: (Variable["SearchforAl"] = false)
+      conditionsString: Variable["SearchforAl"] = false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -14409,7 +14410,7 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["SearchforAl"] = true)
+      conditionsString: Variable["SearchforAl"] = true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -15061,8 +15062,8 @@ MonoBehaviour:
         y: 546.8762
         width: 160
         height: 30
-    canvasScrollPosition: {x: 14.432922, y: 270.10303}
-    canvasZoom: 0.97
+    canvasScrollPosition: {x: 149.36938, y: 46.23686}
+    canvasZoom: 0.3400004
   - id: 8
     fields:
     - title: Title
@@ -16292,7 +16293,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: (Variable["SearchForAl"] = true)
+      userScript: Variable["SearchForAl"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -17130,12 +17131,12 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 575
+        x: 572.82605
         y: 421
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 175}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.46000037
   syncInfo:
     syncActors: 0
     syncItems: 0
