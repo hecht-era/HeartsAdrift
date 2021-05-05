@@ -5797,8 +5797,8 @@ MonoBehaviour:
         y: 377.97833
         width: 160
         height: 30
-    canvasScrollPosition: {x: 216.33464, y: 0}
-    canvasZoom: 1.0000001
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.46000057
   - id: 7
     fields:
     - title: Title
@@ -12674,7 +12674,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: Block
+      falseConditionAction: Passthrough
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 4
@@ -12683,7 +12683,7 @@ MonoBehaviour:
         destinationDialogueID: 12
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["WendyMailDelivered"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -13117,8 +13117,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 787.567
-        y: 598.65985
+        x: 790.50824
+        y: 592.77747
         width: 160
         height: 30
     - id: 17
@@ -13187,8 +13187,8 @@ MonoBehaviour:
         y: 389.59793
         width: 160
         height: 30
-    canvasScrollPosition: {x: 483.8809, y: 217.0232}
-    canvasZoom: 0.34000045
+    canvasScrollPosition: {x: 323.4531, y: 196.94994}
+    canvasZoom: 0.25000045
   - id: 21
     fields:
     - title: Title
