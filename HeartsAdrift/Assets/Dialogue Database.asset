@@ -12533,7 +12533,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1054.0206
-        y: 400
+        y: 397.5
         width: 160
         height: 30
     - id: 13
@@ -12811,10 +12811,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'Variable["ShowPeteToWendy"]=true
-
-        SetQuestState("Wendy''s
-        Love", "success")'
+      userScript: Variable["ShowPeteToWendy"]=true;
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13854,10 +13851,7 @@ MonoBehaviour:
       userScript: 'SetQuestState("Pete - Treasure Hunting", "active")
 
         Variable["Alert"]="
-        Quest: Pete''s Treasure Hunting";;
-
-        SetQuestState("The Wind Beneath
-        Pete''s Wings", "success")'
+        Quest: Pete''s Treasure Hunting";'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13867,8 +13861,8 @@ MonoBehaviour:
         y: 676.889
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 339.21616}
-    canvasZoom: 0.49000022
+    canvasScrollPosition: {x: 0, y: 193.45616}
+    canvasZoom: 0.3700002
   - id: 22
     fields:
     - title: Title
