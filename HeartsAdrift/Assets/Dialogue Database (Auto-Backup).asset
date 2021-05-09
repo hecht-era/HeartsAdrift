@@ -743,7 +743,21 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
-  - id: 5
+  - id: 6
+    fields:
+    - title: Name
+      value: PeteHasTreasure
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+  - id: 7
     fields:
     - title: Name
       value: SearchForAl
@@ -757,10 +771,10 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
-  - id: 6
+  - id: 8
     fields:
     - title: Name
-      value: PeteHasTreasure
+      value: ObtainedTreasure
       type: 0
       typeString: CustomFieldType_Text
     - title: Initial Value
@@ -1846,7 +1860,9 @@ MonoBehaviour:
       userScript: 'SetQuestState("The Wind Beneath Pete''s Wings", "active")
 
         Variable["Alert"]="
-        Quest: The Wind Beneath Pete''s Wings"'
+        Quest: The Wind Beneath Pete''s Wings";
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1856,8 +1872,8 @@ MonoBehaviour:
         y: 944.2245
         width: 160
         height: 30
-    canvasScrollPosition: {x: 1026.3444, y: 743.38416}
-    canvasZoom: 0.6800006
+    canvasScrollPosition: {x: 933.9669, y: 690.6252}
+    canvasZoom: 0.62000066
   - id: 2
     fields:
     - title: Title
@@ -12358,7 +12374,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: Passthrough
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 4
@@ -12367,7 +12383,7 @@ MonoBehaviour:
         destinationDialogueID: 12
         isConnector: 0
         priority: 2
-      conditionsString: Variable["WendyMailDelivered"] == false
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -12517,7 +12533,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1054.0206
-        y: 400
+        y: 397.5
         width: 160
         height: 30
     - id: 13
@@ -12795,7 +12811,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["ShowPeteToWendy"]=true
+      userScript: Variable["ShowPeteToWendy"]=true;
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13773,7 +13789,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 588.0851
+        x: 586.36096
         y: 612.72327
         width: 160
         height: 30
@@ -13832,18 +13848,21 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: SetQuestState("Pete - Treasure Hunting", "active")
+      userScript: 'SetQuestState("Pete - Treasure Hunting", "active")
+
+        Variable["Alert"]="
+        Quest: Pete''s Treasure Hunting";'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 577.5027
-        y: 678.2048
+        y: 676.889
         width: 160
         height: 30
-    canvasScrollPosition: {x: 64.29956, y: 555.12335}
-    canvasZoom: 0.7600001
+    canvasScrollPosition: {x: 0, y: 193.45616}
+    canvasZoom: 0.3700002
   - id: 22
     fields:
     - title: Title
@@ -14023,7 +14042,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["SearchforAl"] = false
+      conditionsString: Variable["SearchForAl"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -14094,7 +14113,7 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SearchforAl"] = true
+      conditionsString: Variable["SearchForAl"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -14746,7 +14765,7 @@ MonoBehaviour:
         y: 546.8762
         width: 160
         height: 30
-    canvasScrollPosition: {x: 149.36938, y: 46.23686}
+    canvasScrollPosition: {x: 17.647095, y: 0}
     canvasZoom: 0.3400004
   - id: 8
     fields:
@@ -15140,7 +15159,7 @@ MonoBehaviour:
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      conditionsString: (Variable["ShowPeteToWendy"] == true)
+      conditionsString: Variable["ObtainedTreasure"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -15712,7 +15731,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: (Variable["PeteHasTreasure"] = true)
+      userScript: Variable["PeteHasTreasure"] = true;
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -15722,8 +15741,8 @@ MonoBehaviour:
         y: 662.72327
         width: 160
         height: 30
-    canvasScrollPosition: {x: 303.3568, y: 157.19327}
-    canvasZoom: 0.43000016
+    canvasScrollPosition: {x: 147.61798, y: 44.66523}
+    canvasZoom: 0.31000015
   - id: 23
     fields:
     - title: Title
@@ -16047,10 +16066,7 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: 'CurrentQuestState("Pete - Treasure Hunting") == "active"
-
-        Variable["Alert"]="
-        Quest: "Pete - Treasure Hunting"'
+      conditionsString: CurrentQuestState("Pete - Treasure Hunting") == "active"
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -16197,8 +16213,8 @@ MonoBehaviour:
         y: 124
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 52.51614}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 231.13692, y: 40.066822}
+    canvasZoom: 0.6700003
   - id: 24
     fields:
     - title: Title
