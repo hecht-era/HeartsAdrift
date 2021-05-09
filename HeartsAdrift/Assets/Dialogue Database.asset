@@ -12533,7 +12533,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 1054.0206
-        y: 400
+        y: 397.5
         width: 160
         height: 30
     - id: 13
@@ -12811,7 +12811,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["ShowPeteToWendy"]=true
+      userScript: Variable["ShowPeteToWendy"]=true;
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13861,8 +13861,8 @@ MonoBehaviour:
         y: 676.889
         width: 160
         height: 30
-    canvasScrollPosition: {x: 22.694412, y: 372.1507}
-    canvasZoom: 0.58000016
+    canvasScrollPosition: {x: 0, y: 193.45616}
+    canvasZoom: 0.3700002
   - id: 22
     fields:
     - title: Title
@@ -15731,7 +15731,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["PeteHasTreasure"] = true
+      userScript: Variable["PeteHasTreasure"] = true;
       onExecute:
         m_PersistentCalls:
           m_Calls: []
