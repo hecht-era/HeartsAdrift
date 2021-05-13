@@ -197,7 +197,7 @@ public class Journal : MonoBehaviour
             UpdatePages(1);
             //pageNum++;
             Debug.Log(pageNum);
-            _CPLData.transform.GetChild(9).gameObject.GetComponent<TextMeshProUGUI>().SetText(_islandCurrentList[pageNum - 3]);
+            _CPLData.transform.GetChild(9).gameObject.GetComponent<TextMeshProUGUI>().SetText(_islandCurrentList[pageNum - 3]); //can probably shorten this with a function that takes a gameobject, int and returns a TMP
             _CPLData.transform.GetChild(9).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][0]);
             _CPLData.transform.GetChild(10).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][1]);
             _CPLData.transform.GetChild(11).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][2]);
