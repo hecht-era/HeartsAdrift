@@ -10,7 +10,7 @@ public class WalkScript : MonoBehaviour
     private bool revert;
 
     private Animator anim;
-    private Animation animation;
+    //private Animation animation;
 
     private UnityEngine.AI.NavMeshAgent agent;
 
