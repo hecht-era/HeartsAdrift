@@ -3,7 +3,57 @@ guid: 1514ab2a6059b3e42a32ac5971a08e10
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brass_Metal
+    second: {fileID: 2100000, guid: f6e5c97be88c71040875acca37fa53b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown_Wood
+    second: {fileID: 2100000, guid: 058868c3ce5a53f4499afb2baf267f5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Default_Material
+    second: {fileID: 2100000, guid: 691377131262a4e40a82297c30c7c127, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass1
+    second: {fileID: 2100000, guid: 54342c11719ec6e469cc2a0ed61c4bd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreenPaint_Wood
+    second: {fileID: 2100000, guid: 17761f112521b1e43a5b674b91362d39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: InsideGrey
+    second: {fileID: 2100000, guid: 4ee633572a1d8c545b2bebe2f950fb51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangePaint_Wood
+    second: {fileID: 2100000, guid: bf7296385f4e7a841bb56135d374d9c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Purple_Cloth
+    second: {fileID: 2100000, guid: e7a0932b8eea4fd4daba69a19b021404, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhitePaint_Wood
+    second: {fileID: 2100000, guid: 7e8ab82c0f157814db5eb10f98f793ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow_Stucco
+    second: {fileID: 2100000, guid: b2ff96b6a8de9dd4ca79c6dc341049f4, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
