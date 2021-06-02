@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using PixelCrushers.DialogueSystem;
 
 public class Journal : MonoBehaviour
 {
@@ -68,6 +69,12 @@ public class Journal : MonoBehaviour
         _PPRData = PPR.transform.GetChild(0).transform.GetChild(0).gameObject;
         _CPLData = CPL.transform.GetChild(0).transform.GetChild(0).gameObject;
         _CPRData = CPR.transform.GetChild(0).transform.GetChild(0).gameObject;
+
+        Lua.RegisterFunction("UpdateQuest", this, typeof(Journal).GetMethod("UpdateQuest"));
+        Lua.RegisterFunction("UpdateClient", this, typeof(Journal).GetMethod("UpdateClient"));
+        Lua.RegisterFunction("UpdateClientName", this, typeof(Journal).GetMethod("UpdateClientName"));
+        Lua.RegisterFunction("UpdateTreasure", this, typeof(Journal).GetMethod("UpdateTreasure"));
+        Lua.RegisterFunction("UpdateIsland", this, typeof(Journal).GetMethod("UpdateIsland"));
     }
 
     void Start()
@@ -168,14 +175,14 @@ public class Journal : MonoBehaviour
             {
                 UpdatePreviousPages(0);
                 _PPLData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum - 2]);
-                _PPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][0]);
+                //_PPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][0]);
                 _PPLData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][1]);
                 _PPLData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][2]);
                 _PPLData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][3]);
                 _PPLData.transform.GetChild(7).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][4]);
 
                 _PPRData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum - 1]);
-                _PPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][0]);
+                //_PPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][0]);
                 _PPRData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][1]);
                 _PPRData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][2]);
                 _PPRData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][3]);
@@ -243,14 +250,14 @@ public class Journal : MonoBehaviour
             UpdateCurrentPages(0);
             pageNum = 0;
             _CPLData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum]);
-            _CPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
+            //_CPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
             _CPLData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
             _CPLData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][2]);
             _CPLData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][3]);
             _CPLData.transform.GetChild(7).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][4]);
 
             _CPRData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum + 1]);
-            _CPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][0]);
+            //_CPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][0]);
             _CPRData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][1]);
             _CPRData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
             _CPRData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][3]);
@@ -385,29 +392,36 @@ public class Journal : MonoBehaviour
         }
     }
 
-    public void UpdateClient(int client, int index)
+    public void UpdateClient(double client, double index)
     {
-        journalCurrentData[client][index] = journalData[client][index];
+        int i = (int)client;
+        int j = (int)index;
+        journalCurrentData[i][j] = journalData[i][j];
     }
 
-    public void UpdateClientName(int index)
+    public void UpdateClientName(double index)
     {
-        _clientCurrentList[index] = _clientList[index];
+        int i = (int)index;
+        _clientCurrentList[i] = _clientList[i];
     }
 
-    public void UpdateQuest(int index)
+    public void UpdateQuest(double index)
     {
-        journalCurrentData[6][index] = journalData[6][index];
+        int i = (int)index;
+        journalCurrentData[6][i] = journalData[6][i];
     }
 
-    public void UpdateTreasure(int index)
+    public void UpdateTreasure(double index)
     {
-        journalCurrentData[8][index] = journalData[7][index];
+        int i = (int)index;
+        journalCurrentData[8][i] = journalData[8][i];
     }
 
-    public void UpdateIsland(int island, int index)
+    public void UpdateIsland(double island, double index)
     {
-        journalCurrentData[island][index] = journalData[8][index];
+        int i = (int)island;
+        int j = (int)index;
+        journalCurrentData[i][j] = journalData[i][j];
     }
 
     private void UpdateCurrentPages(int section)
@@ -477,7 +491,7 @@ public class Journal : MonoBehaviour
         }
         for (int i = 0; i < textList[0].Length; i++)
         {
-            if (i >= min && i <= max)
+            if (i >= min && i <= max && i != 5)
             {
                 textList[0][i].SetActive(true);
                 textList[1][i].SetActive(true);
