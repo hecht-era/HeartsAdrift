@@ -3,27 +3,7 @@ guid: 218765e12dcb09b4d8e8bf5f2323e8c4
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Rock_lambert
-    second: {fileID: 2100000, guid: 8799e0a0923a03b43b81bbca769be825, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Sand_lambert
-    second: {fileID: 2100000, guid: 2c2a8b1072ac1154885bf7cbd14a1245, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Stair_lambert
-    second: {fileID: 2100000, guid: 2122d787b7bb3044093ec825c22c23ed, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: island_Miil_lambert
-    second: {fileID: 2100000, guid: 7353a9af543e49f499daa11bb9885511, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0

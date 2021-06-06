@@ -3,12 +3,7 @@ guid: abed488e1227ce24c869374f679d49ff
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Merged_Hair
-    second: {fileID: 2100000, guid: c4845c0bbf5ea104a9c0dc14b36694bb, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0

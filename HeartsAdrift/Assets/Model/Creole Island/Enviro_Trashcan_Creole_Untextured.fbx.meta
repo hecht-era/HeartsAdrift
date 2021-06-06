@@ -3,17 +3,7 @@ guid: 840721abf1d4a3749b0d231ca81c5f07
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Brass_Metal
-    second: {fileID: 2100000, guid: f6e5c97be88c71040875acca37fa53b8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WhitePaint_Wood
-    second: {fileID: 2100000, guid: 7e8ab82c0f157814db5eb10f98f793ff, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0

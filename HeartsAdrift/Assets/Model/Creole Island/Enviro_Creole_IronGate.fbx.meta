@@ -3,12 +3,7 @@ guid: 08220f8976aa777438528c2668f677af
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Black_WroughtIron
-    second: {fileID: 2100000, guid: 0e8cbb2040bc55b459ace39b0818bee0, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
