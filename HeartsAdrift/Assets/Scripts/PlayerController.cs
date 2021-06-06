@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public float gravity = 20.0f;
     public float lookSpeed = 1.0f;
+    private Animator anim;
 
     CharacterController characterController;
     Vector3 moveDirection = Vector3.zero;
@@ -53,7 +54,14 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = new Vector2(0, rotation.y);
         }
 
-
+        if(moveDirection.x != 0 || moveDirection.z != 0)
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
