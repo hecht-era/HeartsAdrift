@@ -44,6 +44,7 @@ public class boat : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         _rBody = GetComponent<Rigidbody>();
         rope = rope.GetComponent<LineRenderer>();
         _state = StateManager.Instance.GetState();
@@ -177,7 +178,7 @@ public class boat : MonoBehaviour
             {
                 book.GetComponent<Highlight>().RemoveHighlight();
                 book.transform.position = Vector3.MoveTowards(book.transform.position, frontFace.transform.position, 1.1f * Time.deltaTime);
-                book.transform.forward = Vector3.RotateTowards(book.transform.forward, frontFace.transform.forward, .011f, .01f);
+                book.transform.forward = Vector3.RotateTowards(book.transform.forward, frontFace.transform.forward, .05f, .05f);
                 book.transform.localScale = Vector3.MoveTowards(book.transform.localScale, frontFace.transform.localScale, 1.1f * Time.deltaTime);
                 if (Input.GetKeyDown(KeyCode.R))
                 {
@@ -189,7 +190,7 @@ public class boat : MonoBehaviour
             {
                 map.GetComponent<Highlight>().RemoveHighlight();
                 map.transform.position = Vector3.MoveTowards(map.transform.position, frontFace.transform.position, 1f * Time.deltaTime);
-                map.transform.forward = Vector3.RotateTowards(map.transform.forward, frontFace.transform.forward, .011f, .01f);
+                map.transform.forward = Vector3.RotateTowards(map.transform.forward, frontFace.transform.forward, .05f, .05f);
                 map.transform.localScale = Vector3.MoveTowards(map.transform.localScale, frontFace.transform.localScale, 1f * Time.deltaTime);
                 if (Input.GetKeyDown(KeyCode.R))
                 {
@@ -201,11 +202,11 @@ public class boat : MonoBehaviour
         if (_lastState == GameState.READING)
         {
             book.transform.position = Vector3.MoveTowards(book.transform.position, bookPos.transform.position, 1f * Time.deltaTime);
-            book.transform.forward = Vector3.RotateTowards(book.transform.forward, bookPos.transform.forward, .01f, .01f);
+            book.transform.forward = Vector3.RotateTowards(book.transform.forward, bookPos.transform.forward, .05f, .05f);
             book.transform.localScale = Vector3.MoveTowards(book.transform.localScale, bookPos.transform.localScale, 1f * Time.deltaTime);
 
             map.transform.position = Vector3.MoveTowards(map.transform.position, mapPos.transform.position, 1f * Time.deltaTime);
-            map.transform.forward = Vector3.RotateTowards(map.transform.forward, mapPos.transform.forward, .01f, .01f);
+            map.transform.forward = Vector3.RotateTowards(map.transform.forward, mapPos.transform.forward, .05f, .05f);
             map.transform.localScale = Vector3.MoveTowards(map.transform.localScale, mapPos.transform.localScale, 1f * Time.deltaTime);
         }
 

@@ -25,6 +25,7 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !_isPaused)
         {
+            Cursor.lockState = CursorLockMode.None;
             pauseMenu.gameObject.SetActive(true);
             int rand = Random.Range(0, images.Length);
             pauseMenu.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = images[rand];
@@ -33,6 +34,7 @@ public class PauseManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && _isPaused)
         {
+            Cursor.lockState = CursorLockMode.Locked;
             pauseMenu.gameObject.SetActive(false);
             Time.timeScale = 1;
             _isPaused = false;
