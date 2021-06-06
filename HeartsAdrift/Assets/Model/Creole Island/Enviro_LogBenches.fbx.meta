@@ -1,9 +1,49 @@
 fileFormatVersion: 2
-guid: f321fe7f0b2cac14babde1e08b72b892
+guid: 84a7fa94f47a57b43bb5fe8835045496
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue_WoodPaint
+    second: {fileID: 2100000, guid: 8529f34992fcb6949b240686f63304bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown_Wood2
+    second: {fileID: 2100000, guid: 058868c3ce5a53f4499afb2baf267f5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreenPaint_Wood2
+    second: {fileID: 2100000, guid: 17761f112521b1e43a5b674b91362d39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangePaint_Wood
+    second: {fileID: 2100000, guid: bf7296385f4e7a841bb56135d374d9c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pink_WoodPaint
+    second: {fileID: 2100000, guid: 63ae953aad2ce1c4780e2d1bea780448, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Purple_WoodPaint
+    second: {fileID: 2100000, guid: 1a309bfa15ce7cb43b26c33ae3a8dec0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhitePaint_Wood
+    second: {fileID: 2100000, guid: 7e8ab82c0f157814db5eb10f98f793ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow_Stucco
+    second: {fileID: 2100000, guid: b2ff96b6a8de9dd4ca79c6dc341049f4, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

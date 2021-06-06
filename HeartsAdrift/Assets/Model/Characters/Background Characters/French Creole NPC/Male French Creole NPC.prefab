@@ -510,11 +510,11 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8247417321557204785, guid: 522a60236b69d1d40a38b15ed5351df6, type: 3}
-  - {fileID: -382652638819485698, guid: 522a60236b69d1d40a38b15ed5351df6, type: 3}
-  - {fileID: 5818841478622339675, guid: 522a60236b69d1d40a38b15ed5351df6, type: 3}
-  - {fileID: 851252078600328622, guid: 522a60236b69d1d40a38b15ed5351df6, type: 3}
-  - {fileID: -2653651044934150266, guid: 522a60236b69d1d40a38b15ed5351df6, type: 3}
+  - {fileID: 2100000, guid: a9df8ae4c5091894798ccc90f225b3ce, type: 2}
+  - {fileID: 2100000, guid: abc43d8b9806812419dbc9e04a87e3c8, type: 2}
+  - {fileID: 2100000, guid: fa60f5ed907831c4d95df6d862ea5c91, type: 2}
+  - {fileID: 2100000, guid: 9a3310d5b11d2f84385e961e3dcca76f, type: 2}
+  - {fileID: 2100000, guid: 504f2dbd77049214ab8952bd8bc2992e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1681,7 +1681,7 @@ GameObject:
   - component: {fileID: 1740823358889658609}
   - component: {fileID: 2880225165092851343}
   m_Layer: 0
-  m_Name: dude3
+  m_Name: Male French Creole NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

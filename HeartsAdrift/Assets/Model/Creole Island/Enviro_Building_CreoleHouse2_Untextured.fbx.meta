@@ -3,7 +3,37 @@ guid: b9d2639020e673e429b22254ccdf8d01
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Blue_WoodPaint
+    second: {fileID: 2100000, guid: 8529f34992fcb6949b240686f63304bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass1
+    second: {fileID: 2100000, guid: 54342c11719ec6e469cc2a0ed61c4bd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: InsideGrey
+    second: {fileID: 2100000, guid: 4ee633572a1d8c545b2bebe2f950fb51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangePaint_Wood
+    second: {fileID: 2100000, guid: bf7296385f4e7a841bb56135d374d9c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhitePaint_Wood
+    second: {fileID: 2100000, guid: 7e8ab82c0f157814db5eb10f98f793ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yellow_Stucco
+    second: {fileID: 2100000, guid: b2ff96b6a8de9dd4ca79c6dc341049f4, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
