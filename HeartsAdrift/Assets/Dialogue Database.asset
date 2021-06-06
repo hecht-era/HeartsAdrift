@@ -1862,26 +1862,7 @@ MonoBehaviour:
         Variable["Alert"]="
         Quest: The Wind Beneath Pete''s Wings";
 
-        UpdateQuest(1)
-
-        UpdateIsland(3,
-        0)
-
-        UpdateIsland(3, 1)
-
-        UpdateClient(1, 0)
-
-        UpdateClient(1,
-        1)
-
-        UpdateClient(1, 2)
-
-        UpdateClient(1, 3)
-
-        UpdateClient(1,
-        4)
-
-        UpdateClientName(1)'
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1891,8 +1872,8 @@ MonoBehaviour:
         y: 944.2245
         width: 160
         height: 30
-    canvasScrollPosition: {x: 1042.1171, y: 769.55115}
-    canvasZoom: 0.7400004
+    canvasScrollPosition: {x: 903.8307, y: 122.88048}
+    canvasZoom: 0.23000064
   - id: 2
     fields:
     - title: Title
@@ -2497,10 +2478,6 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      - title: EventGuid
-        value: 043594d3-5927-412e-bbbb-4e890fc91c24
-        type: 0
-        typeString: 
       conversationID: 2
       isRoot: 0
       isGroup: 1
@@ -2515,23 +2492,7 @@ MonoBehaviour:
         Variable["Alert"]="Quest
         : Wendy''s Love"
 
-        Variable["HaveMailForFred"] = true;
-
-        UpdateQuest(0)
-
-        UpdateClient(0,
-        1)
-
-        UpdateClient(0, 3)
-
-        UpdateClient(0, 4)
-
-        UpdateClientName(0)
-
-        UpdateIsland(2,
-        0)
-
-        UpdateIsland(2, 1)'
+        Variable["HaveMailForFred"] = true'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -3009,7 +2970,7 @@ MonoBehaviour:
       - title: Dialogue Text
         value: I guess since you're here, I should probably actually give you my
           mail to deliver, haha.  If you're heading over to Lighthouse Island, could
-          you bring this letter to Fred over there?
+          you bring this letter over to the mailbox there?
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -3124,8 +3085,8 @@ MonoBehaviour:
         y: 901.7413
         width: 160
         height: 30
-    canvasScrollPosition: {x: 130.92517, y: 785.14856}
-    canvasZoom: 0.64000106
+    canvasScrollPosition: {x: 148.95212, y: 793.1919}
+    canvasZoom: 0.67000103
   - id: 3
     fields:
     - title: Title
@@ -3880,8 +3841,8 @@ MonoBehaviour:
         y: 379
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 22.14061}
-    canvasZoom: 1.0600001
+    canvasScrollPosition: {x: 0, y: 71.23486}
+    canvasZoom: 0.4900004
   - id: 5
     fields:
     - title: Title
@@ -5752,8 +5713,8 @@ MonoBehaviour:
         y: 377.97833
         width: 160
         height: 30
-    canvasScrollPosition: {x: 185.64673, y: 0}
-    canvasZoom: 0.8800004
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.46000057
   - id: 7
     fields:
     - title: Title
@@ -11809,7 +11770,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: (Variable["HaveMailForFred"] == true)
-      userScript: UpdateIsland(3, 0)
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12154,7 +12115,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["HaveMailForFred"] == false
-      userScript: UpdateIsland(3, 0)
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12164,8 +12125,8 @@ MonoBehaviour:
         y: 126.59574
         width: 160
         height: 30
-    canvasScrollPosition: {x: 321.19272, y: 0}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.4600004
   - id: 4
     fields:
     - title: Title
@@ -12507,7 +12468,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 809.69073
-        y: 304.50085
+        y: 302.06183
         width: 160
         height: 30
     - id: 12
@@ -12850,9 +12811,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 'Variable["ShowPeteToWendy"]=true
-
-        UpdateClient(0, 3)'
+      userScript: Variable["ShowPeteToWendy"]=true;
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -12928,8 +12887,8 @@ MonoBehaviour:
         y: 389.59793
         width: 160
         height: 30
-    canvasScrollPosition: {x: 234.82452, y: 63.623077}
-    canvasZoom: 0.82000023
+    canvasScrollPosition: {x: 401.00092, y: 109.99988}
+    canvasZoom: 0.40000045
   - id: 21
     fields:
     - title: Title
@@ -13892,9 +13851,7 @@ MonoBehaviour:
       userScript: 'SetQuestState("Pete - Treasure Hunting", "active")
 
         Variable["Alert"]="
-        Quest: Pete''s Treasure Hunting"
-
-        UpdateQuest(2)'
+        Quest: Pete''s Treasure Hunting";'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -13904,8 +13861,8 @@ MonoBehaviour:
         y: 676.889
         width: 160
         height: 30
-    canvasScrollPosition: {x: 322.99664, y: 0}
-    canvasZoom: 0.82000005
+    canvasScrollPosition: {x: 0, y: 193.45616}
+    canvasZoom: 0.3700002
   - id: 22
     fields:
     - title: Title
@@ -14086,7 +14043,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["SearchForAl"] == false
-      userScript: UpdateIsland(2)
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14157,7 +14114,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: Variable["SearchForAl"] == true
-      userScript: UpdateIsland(2)
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14808,8 +14765,8 @@ MonoBehaviour:
         y: 546.8762
         width: 160
         height: 30
-    canvasScrollPosition: {x: 212.93219, y: 0}
-    canvasZoom: 0.7600003
+    canvasScrollPosition: {x: 17.647095, y: 0}
+    canvasZoom: 0.3400004
   - id: 8
     fields:
     - title: Title
@@ -15784,8 +15741,8 @@ MonoBehaviour:
         y: 662.72327
         width: 160
         height: 30
-    canvasScrollPosition: {x: 164.84918, y: 44.09337}
-    canvasZoom: 0.7900001
+    canvasScrollPosition: {x: 147.61798, y: 44.66523}
+    canvasZoom: 0.31000015
   - id: 23
     fields:
     - title: Title

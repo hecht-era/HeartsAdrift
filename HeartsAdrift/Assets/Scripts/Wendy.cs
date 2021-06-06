@@ -16,9 +16,12 @@ public class Wendy : MonoBehaviour
 
     private QuestState questState;
 
+    private bool isQuestGiven;
+
     void Start()
     {
         revert = false;
+        isQuestGiven = false;
         agent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
 
         agent.SetDestination(waypoint1.position);
@@ -27,10 +30,24 @@ public class Wendy : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void Update()
+    private void Update()
     {
+        //QuestLog.SetQuestState("Wendy's Love", QuestState.Active);
+        //questState = QuestLog.GetQuestState("Wendy's Love");
         if (questState != QuestState.Unassigned)
         {
+            if (!isQuestGiven)
+            {
+                Journal.Instance.UpdateQuest(0);
+                Journal.Instance.UpdateClientName(0);
+                Journal.Instance.UpdateClient(0, 0);
+                Journal.Instance.UpdateClient(0, 1);
+                Journal.Instance.UpdateClient(0, 3);
+                Journal.Instance.UpdateIsland(2, 0);
+                Journal.Instance.UpdateIsland(2, 1);
+                Journal.Instance.UpdateQuest(0);
+            }
+            isQuestGiven = true;
             if (TimeCycle.Instance.GetHours() == 8f && !revert)
             {
                 agent.destination = waypoint2.position;

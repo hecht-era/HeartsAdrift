@@ -3,37 +3,7 @@ guid: f710ffe15d0828144ba21b9abe160aef
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Eye_mat
-    second: {fileID: 2100000, guid: 6f47d9f26281e7246923a1bf8cbad45c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert3
-    second: {fileID: 2100000, guid: b7ceddc983b13ae47a13437742e66c3f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert4
-    second: {fileID: 2100000, guid: c62a175dbb82b054084d722486ee7c80, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert5
-    second: {fileID: 2100000, guid: ea59204a43f78ec48ba5ee656efd33ff, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert6
-    second: {fileID: 2100000, guid: 2b372c5d65a0f5d4eb5a99aa16146f4e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert7
-    second: {fileID: 2100000, guid: e28515340e035e349ac8d710ef3757a6, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0

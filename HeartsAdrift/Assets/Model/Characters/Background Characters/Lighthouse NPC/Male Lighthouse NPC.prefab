@@ -293,13 +293,13 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f87d95765e2b1e8448924971c9bf9f06, type: 2}
-  - {fileID: 2100000, guid: cccd1e34f0dddda43b760ca9c6f48e6e, type: 2}
-  - {fileID: 2100000, guid: 8895240f41dbae940af096f1e438371e, type: 2}
-  - {fileID: 2100000, guid: 7d11f31be3b69d54c9b32d1b9639da44, type: 2}
-  - {fileID: 2100000, guid: 0fefb02905430ae49a7bd3ba17ed62f8, type: 2}
-  - {fileID: 2100000, guid: cccd1e34f0dddda43b760ca9c6f48e6e, type: 2}
-  - {fileID: 2100000, guid: a0174beae8841404b9b5ec384d788490, type: 2}
+  - {fileID: 5953583603500802798, guid: 9163c1afb3d22ba429e5b514ed3ffa22, type: 3}
+  - {fileID: 6271573414225017425, guid: 9163c1afb3d22ba429e5b514ed3ffa22, type: 3}
+  - {fileID: -8848810374240701247, guid: 9163c1afb3d22ba429e5b514ed3ffa22, type: 3}
+  - {fileID: -6139538106269404989, guid: 9163c1afb3d22ba429e5b514ed3ffa22, type: 3}
+  - {fileID: 5407318790985971705, guid: 9163c1afb3d22ba429e5b514ed3ffa22, type: 3}
+  - {fileID: 851252078600328622, guid: 9163c1afb3d22ba429e5b514ed3ffa22, type: 3}
+  - {fileID: -4770390735465466038, guid: 9163c1afb3d22ba429e5b514ed3ffa22, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1655,7 +1655,7 @@ GameObject:
   - component: {fileID: 4728104852061030072}
   - component: {fileID: 3063204095145983481}
   m_Layer: 0
-  m_Name: Male Lighthouse NPC
+  m_Name: Lighthouse NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

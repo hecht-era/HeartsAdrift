@@ -3,12 +3,7 @@ guid: 3ed3fed48778dad4e9bc48a6f94f0715
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Pink_Cloth
-    second: {fileID: 2100000, guid: 6866ab3d0a67249438eb5c75edc22a8f, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0

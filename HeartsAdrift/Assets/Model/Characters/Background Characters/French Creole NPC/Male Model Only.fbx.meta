@@ -3,32 +3,7 @@ guid: 522a60236b69d1d40a38b15ed5351df6
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Black1
-    second: {fileID: 2100000, guid: a9df8ae4c5091894798ccc90f225b3ce, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Body_Basic_Mesh_low1
-    second: {fileID: 2100000, guid: 9a3310d5b11d2f84385e961e3dcca76f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Red
-    second: {fileID: 2100000, guid: abc43d8b9806812419dbc9e04a87e3c8, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: White1
-    second: {fileID: 2100000, guid: fa60f5ed907831c4d95df6d862ea5c91, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Yellow
-    second: {fileID: 2100000, guid: 504f2dbd77049214ab8952bd8bc2992e, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0

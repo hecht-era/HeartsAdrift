@@ -1317,12 +1317,12 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 680e1d400771af74197779117ee375f6, type: 2}
-  - {fileID: 2100000, guid: f87d95765e2b1e8448924971c9bf9f06, type: 2}
-  - {fileID: 2100000, guid: 8895240f41dbae940af096f1e438371e, type: 2}
-  - {fileID: 2100000, guid: a91645f936037d94b961a6d775957768, type: 2}
-  - {fileID: 2100000, guid: 7d11f31be3b69d54c9b32d1b9639da44, type: 2}
-  - {fileID: 2100000, guid: a0174beae8841404b9b5ec384d788490, type: 2}
+  - {fileID: 2926557707537190794, guid: f738ca7fb64c9b549936a9855a0e195e, type: 3}
+  - {fileID: -6139538106269404989, guid: f738ca7fb64c9b549936a9855a0e195e, type: 3}
+  - {fileID: 5847000379408164377, guid: f738ca7fb64c9b549936a9855a0e195e, type: 3}
+  - {fileID: -841512535343304577, guid: f738ca7fb64c9b549936a9855a0e195e, type: 3}
+  - {fileID: 8651244654972398386, guid: f738ca7fb64c9b549936a9855a0e195e, type: 3}
+  - {fileID: -4770390735465466038, guid: f738ca7fb64c9b549936a9855a0e195e, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1867,7 +1867,7 @@ GameObject:
   - component: {fileID: 6221978670512333871}
   - component: {fileID: 7377990116180487627}
   m_Layer: 0
-  m_Name: Female Lighthouse NPC
+  m_Name: lady
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
