@@ -3,7 +3,57 @@ guid: d3943a519dc998f479934f3646941675
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brass_Metal
+    second: {fileID: 2100000, guid: f6e5c97be88c71040875acca37fa53b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown_Brick
+    second: {fileID: 2100000, guid: a03d98140603262408e7bcfd62bb698f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass1
+    second: {fileID: 2100000, guid: 54342c11719ec6e469cc2a0ed61c4bd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreenPaint_Wood
+    second: {fileID: 2100000, guid: 17761f112521b1e43a5b674b91362d39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Greend_FadedWoodPaint
+    second: {fileID: 2100000, guid: b7cc994ff3e62fe4585126450ab22e41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: InsideGrey
+    second: {fileID: 2100000, guid: 4ee633572a1d8c545b2bebe2f950fb51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangePaint_Wood
+    second: {fileID: 2100000, guid: bf7296385f4e7a841bb56135d374d9c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pink_WoodPaint
+    second: {fileID: 2100000, guid: 63ae953aad2ce1c4780e2d1bea780448, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Purple_WoodPaint
+    second: {fileID: 2100000, guid: 1a309bfa15ce7cb43b26c33ae3a8dec0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhitePaint_Wood
+    second: {fileID: 2100000, guid: 7e8ab82c0f157814db5eb10f98f793ff, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

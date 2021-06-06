@@ -3,7 +3,27 @@ guid: 5d1c657b95fd29348ba8a82e9945e7eb
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: envMat_lighthouseIsle_lighthouse_houseBase
+    second: {fileID: 2100000, guid: 5d275abb998dccd46bda04728b8e9e78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: envMat_lighthouseIsle_lighthouse_topAndLens
+    second: {fileID: 2100000, guid: a83e4e99899ffa6499f064b71ee011c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: envMat_lighthouseIsle_lighthouse_tower
+    second: {fileID: 2100000, guid: ed1d6950f5903ed429be162ff6b9b13c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: envMat_lighthouseIsle_lighthouse_windowsAndDoor
+    second: {fileID: 2100000, guid: 5f96293b80c900c4b9729ea097c1d592, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -3,7 +3,32 @@ guid: a6befd8fa8161814c938f4b090e9c1ca
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Basic_Mesh_low1
+    second: {fileID: 2100000, guid: 5ab7995e1ebfc1345b0c14628a763c13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 739609a6d5a6e91469f7a647f92f6bfa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LtYellow
+    second: {fileID: 2100000, guid: 3613943ad56778743ab8bac0474fa578, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teal
+    second: {fileID: 2100000, guid: ed8cca7a1267df849a27a823a43f999b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: White
+    second: {fileID: 2100000, guid: 016f02566af41ed4aab91656fc8b872f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

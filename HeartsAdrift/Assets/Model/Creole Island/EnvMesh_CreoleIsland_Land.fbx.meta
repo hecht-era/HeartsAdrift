@@ -3,7 +3,12 @@ guid: a7aaa77c00377504db6723e2fe0cb4d0
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CreoleIsle_HighPolySculpt1
+    second: {fileID: 2100000, guid: c3868bdd598361c4b829aad287ec4889, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
