@@ -22,6 +22,7 @@ public class boat : MonoBehaviour
     [SerializeField] public Transform playerPos;
     [SerializeField] public Transform crow;
     [SerializeField] public GameObject book;
+    [SerializeField] public GameObject bookCover;
     //[SerializeField] public GameObject camFront;
     [SerializeField] public GameObject bookPos;
     [SerializeField] public GameObject mapPos;
@@ -42,9 +43,15 @@ public class boat : MonoBehaviour
 
     private Vector3 _treasureTarget;
 
-    void Start()
+    private Journal journal;
+
+    private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void Start()
+    {
         _rBody = GetComponent<Rigidbody>();
         rope = rope.GetComponent<LineRenderer>();
         _state = StateManager.Instance.GetState();
@@ -56,6 +63,7 @@ public class boat : MonoBehaviour
         _gotTreasure = false;
         _pickUpTreasure = false;
         _isAutoSail = false;
+        journal = book.GetComponent<Journal>();
     }
 
     void FixedUpdate()
@@ -93,8 +101,10 @@ public class boat : MonoBehaviour
     }
     private void Update()
     {
-        //Debug.Log(StateManager.Instance.GetState());
-
+        if(StateManager.Instance.GetState() != GameState.READING)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         //Cast a ray forward and highlight interactable object
         RaycastHit hit;
         Ray ray = new Ray(cam.transform.position, cam.transform.forward);
@@ -103,13 +113,17 @@ public class boat : MonoBehaviour
             if (hit.collider.gameObject.transform.tag == "Book")
             {
                 _hitBook = hit.collider.gameObject;
-                _hitBook.GetComponent<Highlight>().AddHighlight();
+                bookCover.GetComponent<Highlight>().AddHighlight();
                 _isHighlighted = true;
+                canvas.transform.GetChild(6).gameObject.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E) && StateManager.Instance.GetState() != GameState.READING)
                 {
+                    canvas.transform.GetChild(6).gameObject.SetActive(false);
                     _lastState = StateManager.Instance.GetState();
                     StateManager.Instance.SetState(GameState.READING);
-                    book.transform.SetParent(gameObject.transform.GetChild(12).transform);
+                    bookCover.GetComponent<Highlight>().RemoveHighlight();
+                    Cursor.lockState = CursorLockMode.None;
+                    journal.OpenJournal(true);
                 }
             }
             else if (hit.collider.gameObject.transform.tag == "Map" && StateManager.Instance.GetState() != GameState.READING)
@@ -117,23 +131,25 @@ public class boat : MonoBehaviour
                 _hitMap = hit.collider.gameObject;
                 _hitMap.GetComponent<Highlight>().AddHighlight();
                 _isHighlighted = true;
+                canvas.transform.GetChild(6).gameObject.SetActive(true);
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    canvas.transform.GetChild(6).gameObject.SetActive(false);
                     _lastState = StateManager.Instance.GetState();
                     StateManager.Instance.SetState(GameState.READING);
-                    book.transform.SetParent(gameObject.transform.GetChild(12).transform);
                 }
             }
         }
         else if (_isHighlighted)
         {
             if (_hitBook != null)
-                _hitBook.GetComponent<Highlight>().RemoveHighlight();
+                bookCover.GetComponent<Highlight>().RemoveHighlight();
             if (_hitMap != null)
                 _hitMap.GetComponent<Highlight>().RemoveHighlight();
             _isHighlighted = false;
             _hitBook = null;
             _hitMap = null;
+            canvas.transform.GetChild(6).gameObject.SetActive(false);
         }
 
         if (_isTreasure)
@@ -174,17 +190,24 @@ public class boat : MonoBehaviour
         }
         if (StateManager.Instance.GetState() == GameState.READING)
         {
-            if (_hitBook != null)
+            if (_hitBook != null || journal.ReturnJournal())
             {
-                book.GetComponent<Highlight>().RemoveHighlight();
                 book.transform.position = Vector3.MoveTowards(book.transform.position, frontFace.transform.position, 1.1f * Time.deltaTime);
-                book.transform.forward = Vector3.RotateTowards(book.transform.forward, frontFace.transform.forward, .05f, .05f);
-                book.transform.localScale = Vector3.MoveTowards(book.transform.localScale, frontFace.transform.localScale, 1.1f * Time.deltaTime);
+                book.transform.forward = Vector3.RotateTowards(book.transform.forward, -frontFace.transform.forward, .05f, .05f);
                 if (Input.GetKeyDown(KeyCode.R))
                 {
+                    bookCover.GetComponent<Highlight>().RemoveHighlight();
                     StateManager.Instance.SetState(_lastState);
                     _lastState = GameState.READING;
+                    Cursor.lockState = CursorLockMode.Locked;
+                    journal.OpenJournal(false);
                 }
+            }
+            else if (!journal.ReturnJournal() && _hitMap == null)
+            {
+                StateManager.Instance.SetState(_lastState);
+                _lastState = GameState.READING;
+                Cursor.lockState = CursorLockMode.Locked;
             }
             if (_hitMap != null)
             {
@@ -194,6 +217,7 @@ public class boat : MonoBehaviour
                 map.transform.localScale = Vector3.MoveTowards(map.transform.localScale, frontFace.transform.localScale, 1f * Time.deltaTime);
                 if (Input.GetKeyDown(KeyCode.R))
                 {
+                    map.GetComponent<Highlight>().RemoveHighlight();
                     StateManager.Instance.SetState(_lastState);
                     _lastState = GameState.READING;
                 }
@@ -201,13 +225,17 @@ public class boat : MonoBehaviour
         }
         if (_lastState == GameState.READING)
         {
+            bookCover.GetComponent<Collider>().enabled = false;
+            map.GetComponent<Collider>().enabled = false;
             book.transform.position = Vector3.MoveTowards(book.transform.position, bookPos.transform.position, 1f * Time.deltaTime);
             book.transform.forward = Vector3.RotateTowards(book.transform.forward, bookPos.transform.forward, .05f, .05f);
-            book.transform.localScale = Vector3.MoveTowards(book.transform.localScale, bookPos.transform.localScale, 1f * Time.deltaTime);
-
+            if (book.transform.position == bookPos.transform.position)
+                bookCover.GetComponent<Collider>().enabled = true;
             map.transform.position = Vector3.MoveTowards(map.transform.position, mapPos.transform.position, 1f * Time.deltaTime);
             map.transform.forward = Vector3.RotateTowards(map.transform.forward, mapPos.transform.forward, .05f, .05f);
             map.transform.localScale = Vector3.MoveTowards(map.transform.localScale, mapPos.transform.localScale, 1f * Time.deltaTime);
+            if (map.transform.position == mapPos.transform.position)
+                map.GetComponent<Collider>().enabled = true;
         }
 
         if (StateManager.Instance.GetState() != GameState.WALKING && _inTrigger)
@@ -278,7 +306,7 @@ public class boat : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        //if(other.tag == "Docking")
+        if(other.tag == "Docking")
             _inTrigger = true;
         _otherObj = other.gameObject;
 

@@ -13,7 +13,7 @@ public class Highlight : MonoBehaviour
 
     public void AddHighlight()
     {
-        gameObject.GetComponent<Renderer>().material.color = Color.yellow;
+        gameObject.GetComponent<Renderer>().material.color = Color.green;
     }
 
     public void RemoveHighlight()

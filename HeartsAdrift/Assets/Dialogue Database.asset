@@ -14049,8 +14049,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 919
-        y: 92
+        x: 945.8293
+        y: 89.560974
         width: 160
         height: 30
     - id: 2
@@ -14765,8 +14765,74 @@ MonoBehaviour:
         y: 546.8762
         width: 160
         height: 30
-    canvasScrollPosition: {x: 17.647095, y: 0}
-    canvasZoom: 0.3400004
+    - id: 12
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 10
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "You forget the clue already?  It was \"This little piggy went to
+          market.\"  \n\nGood luck!"
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 22
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: Variable["SearchForAl"] == true
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 746.3549
+        y: 99.99997
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 49.52588, y: 0}
+    canvasZoom: 0.8200002
   - id: 8
     fields:
     - title: Title
@@ -15895,9 +15961,10 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: 'Just between you and me, I heard of a guy over on Creole Island.
-          Name''s...Al Wishes or something like that. Anyway, I heard he has a map
-          to some sort of treasure.  I bet whatever it is, it has to be good! '
+        value: "Just between you and me, I heard of a guy over on Creole Island.
+          Name's...Al Wishes or something like that. Anyway, I heard he has a map
+          to some sort of treasure.  I bet whatever it is, it has to be good! \n\nIf
+          you don't know, Creole Island is out west. You can't miss it!"
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical

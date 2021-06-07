@@ -23,6 +23,16 @@ public class Journal : MonoBehaviour
     private GameObject _PPRData;
     private GameObject _PPLData;
 
+    public GameObject BM_TreasureLeft;
+    public GameObject BM_IslandsLeft;
+    public GameObject BM_PeopleLeft;
+    public GameObject BM_DeliveriesLeft;
+    public GameObject BM_TreasureRight;
+    public GameObject BM_IslandsRight;
+    public GameObject BM_PeopleRight;
+    public GameObject BM_DeliveriesRight;
+    public GameObject BM_CloseRight;
+
 
     //public Image[] photo = new Image[4];
 
@@ -58,6 +68,8 @@ public class Journal : MonoBehaviour
 
     public List<Sprite> journalPhotos = new List<Sprite>();
 
+    private Animator anim;
+
     [HideInInspector]
     public int pageNum;
     
@@ -72,6 +84,7 @@ public class Journal : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         pageNum = 0;
         journalCurrentData.Add(0, _wendyCurrentData);
         journalCurrentData.Add(1, _peteCurrentData);
@@ -128,31 +141,45 @@ public class Journal : MonoBehaviour
         }
 
         UpdatePageRight();
+        anim.SetBool("isUsing", false);
     }
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
+        if (anim.GetBool("isUsing"))
         {
-            pageNum -= 2;
-            if (pageNum < 0)
-                pageNum = 8;
-            UpdatePageLeft();
+            if (Input.GetKeyDown(KeyCode.U))
+            {
+                StartCoroutine(TurnPage(false));
+                pageNum -= 2;
+                if (pageNum < 0)
+                    pageNum = 8;
+                UpdatePageLeft();
+            }
+            if (Input.GetKeyDown(KeyCode.I))
+            {
+                StartCoroutine(TurnPage(true));
+                pageNum += 2;
+                if (pageNum == journalData.Count)
+                    pageNum = 0;
+                UpdatePageRight();
+            }
         }
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            pageNum += 2;
-            if (pageNum == journalData.Count)
-                pageNum = 0;
-            UpdatePageRight();
-        }
+
     }
 
     private void UpdatePageRight()
     {
         if (pageNum < 6 && pageNum > 1) //islands, pages 2-5 (4 pages) -----maybe i need to count by twos...so this would be pages 4-7
         {
+            BM_PeopleLeft.SetActive(true);
+            BM_IslandsRight.SetActive(false);
+            BM_IslandsLeft.SetActive(false);
+            BM_DeliveriesLeft.SetActive(false);
+            BM_TreasureLeft.SetActive(false);
+            BM_DeliveriesRight.SetActive(true);
+            BM_TreasureRight.SetActive(true);
             UpdateCurrentPages(1);
             _CPLData.transform.GetChild(8).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
             _CPLData.transform.GetChild(9).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
@@ -168,14 +195,14 @@ public class Journal : MonoBehaviour
             {
                 UpdatePreviousPages(0);
                 _PPLData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum - 2]);
-                _PPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][0]);
+                //_PPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][0]);
                 _PPLData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][1]);
                 _PPLData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][2]);
                 _PPLData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][3]);
                 _PPLData.transform.GetChild(7).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][4]);
 
                 _PPRData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum - 1]);
-                _PPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][0]);
+                //_PPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][0]);
                 _PPRData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][1]);
                 _PPRData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][2]);
                 _PPRData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][3]);
@@ -198,6 +225,13 @@ public class Journal : MonoBehaviour
         }
         else if (pageNum == 6) //quests, page 6 (1 page) ------pages 8-9
         {
+            BM_PeopleLeft.SetActive(true);
+            BM_IslandsRight.SetActive(false);
+            BM_IslandsLeft.SetActive(true);
+            BM_DeliveriesLeft.SetActive(false);
+            BM_TreasureLeft.SetActive(false);
+            BM_DeliveriesRight.SetActive(false);
+            BM_TreasureRight.SetActive(true);
             UpdateCurrentPages(2);
             _CPLData.transform.GetChild(13).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
             _CPLData.transform.GetChild(14).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
@@ -220,6 +254,13 @@ public class Journal : MonoBehaviour
         }
         else if (pageNum == 8) //treasures, page 7 (1 page) ----pages 10-11
         {
+            BM_PeopleLeft.SetActive(true);
+            BM_IslandsRight.SetActive(false);
+            BM_IslandsLeft.SetActive(true);
+            BM_DeliveriesLeft.SetActive(true);
+            BM_TreasureLeft.SetActive(false);
+            BM_DeliveriesRight.SetActive(false);
+            BM_TreasureRight.SetActive(false);
             UpdateCurrentPages(3);
             _CPLData.transform.GetChild(17).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
             _CPLData.transform.GetChild(18).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
@@ -240,17 +281,24 @@ public class Journal : MonoBehaviour
         }
         else if (pageNum > 8 || pageNum < 2) //clients, pages 0-1 (2 pages) ----pages 0-3
         {
+            BM_PeopleLeft.SetActive(false);
+            BM_DeliveriesLeft.SetActive(false);
+            BM_IslandsLeft.SetActive(false);
+            BM_TreasureLeft.SetActive(false);
+            BM_IslandsRight.SetActive(true);
+            BM_DeliveriesRight.SetActive(true);
+            BM_TreasureRight.SetActive(true);
             UpdateCurrentPages(0);
             pageNum = 0;
             _CPLData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum]);
-            _CPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
+            //_CPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
             _CPLData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
             _CPLData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][2]);
             _CPLData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][3]);
             _CPLData.transform.GetChild(7).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][4]);
 
             _CPRData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum + 1]);
-            _CPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][0]);
+            //_CPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][0]);
             _CPRData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][1]);
             _CPRData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
             _CPRData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][3]);
@@ -271,6 +319,13 @@ public class Journal : MonoBehaviour
     {
         if (pageNum < 6 && pageNum > 1) //islands, pages 2-5 (4 pages) -----maybe i need to count by twos...so this would be pages 4-7
         {
+            BM_PeopleLeft.SetActive(true);
+            BM_IslandsRight.SetActive(false);
+            BM_IslandsLeft.SetActive(false);
+            BM_DeliveriesLeft.SetActive(false);
+            BM_TreasureLeft.SetActive(false);
+            BM_DeliveriesRight.SetActive(true);
+            BM_TreasureRight.SetActive(true);
             UpdateCurrentPages(1);
             _CPLData.transform.GetChild(8).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
             _CPLData.transform.GetChild(9).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
@@ -286,14 +341,14 @@ public class Journal : MonoBehaviour
             {
                 UpdatePreviousPages(0);
                 _PPLData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum - 2]);
-                _PPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][0]);
+                //_PPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][0]);
                 _PPLData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][1]);
                 _PPLData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][2]);
                 _PPLData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][3]);
                 _PPLData.transform.GetChild(7).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][4]);
 
                 _PPRData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum - 1]);
-                _PPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][0]);
+                //_PPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][0]);
                 _PPRData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][1]);
                 _PPRData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][2]);
                 _PPRData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][3]);
@@ -316,6 +371,13 @@ public class Journal : MonoBehaviour
         }
         else if (pageNum == 6) //quests, page 6 (1 page) ------pages 8-9
         {
+            BM_PeopleLeft.SetActive(true);
+            BM_IslandsRight.SetActive(false);
+            BM_IslandsLeft.SetActive(true);
+            BM_DeliveriesLeft.SetActive(false);
+            BM_TreasureLeft.SetActive(false);
+            BM_DeliveriesRight.SetActive(false);
+            BM_TreasureRight.SetActive(true);
             UpdateCurrentPages(2);
             _CPLData.transform.GetChild(13).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
             _CPLData.transform.GetChild(14).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
@@ -338,6 +400,13 @@ public class Journal : MonoBehaviour
         }
         else if (pageNum == 8) //treasures, page 7 (1 page) ----pages 10-11
         {
+            BM_PeopleLeft.SetActive(true);
+            BM_IslandsRight.SetActive(false);
+            BM_IslandsLeft.SetActive(true);
+            BM_DeliveriesLeft.SetActive(true);
+            BM_TreasureLeft.SetActive(false);
+            BM_DeliveriesRight.SetActive(false);
+            BM_TreasureRight.SetActive(false);
             UpdateCurrentPages(3);
             _CPLData.transform.GetChild(17).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
             _CPLData.transform.GetChild(18).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
@@ -358,17 +427,24 @@ public class Journal : MonoBehaviour
         }
         else if (pageNum > 8 || pageNum < 2) //clients, pages 0-1 (2 pages) ----pages 0-3
         {
+            BM_PeopleLeft.SetActive(false);
+            BM_DeliveriesLeft.SetActive(false);
+            BM_IslandsLeft.SetActive(false);
+            BM_TreasureLeft.SetActive(false);
+            BM_IslandsRight.SetActive(true);
+            BM_DeliveriesRight.SetActive(true);
+            BM_TreasureRight.SetActive(true);
             UpdateCurrentPages(0);
             pageNum = 0;
             _CPLData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum]);
-            _CPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
+            //_CPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
             _CPLData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
             _CPLData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][2]);
             _CPLData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][3]);
             _CPLData.transform.GetChild(7).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][4]);
 
             _CPRData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum + 1]);
-            _CPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][0]);
+            //_CPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][0]);
             _CPRData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][1]);
             _CPRData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
             _CPRData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][3]);
@@ -437,7 +513,12 @@ public class Journal : MonoBehaviour
         }
         for (int i = 0; i < textList[0].Length; i++)
         {
-            if (i >= min && i <= max)
+            if (i == 5)
+            {
+                textList[2][i].SetActive(false);
+                textList[3][i].SetActive(false);
+            }
+            else if (i >= min && i <= max)
             {
                 textList[2][i].SetActive(true);
                 textList[3][i].SetActive(true);
@@ -477,7 +558,12 @@ public class Journal : MonoBehaviour
         }
         for (int i = 0; i < textList[0].Length; i++)
         {
-            if (i >= min && i <= max)
+            if (i == 5)
+            {
+                textList[0][i].SetActive(false);
+                textList[1][i].SetActive(false);
+            }
+            else if (i >= min && i <= max)
             {
                 textList[0][i].SetActive(true);
                 textList[1][i].SetActive(true);
@@ -488,5 +574,39 @@ public class Journal : MonoBehaviour
                 textList[1][i].SetActive(false);
             }
         }
+    }
+
+    public void OpenJournal(bool isOpen)
+    {
+        anim.SetBool("isUsing", isOpen);
+    }
+
+    public bool ReturnJournal()
+    {
+        return anim.GetBool("isUsing");
+    }
+
+    IEnumerator TurnPage(bool isForward)
+    {
+        if (isForward)
+            anim.Play("journal page turn forward", -1, 0f);
+        else anim.Play("journal page turn backward", -1, 0f);
+        yield return new WaitForSeconds(.5f);
+        anim.Play("journal open side", -1, 1);
+        yield return null;
+    }
+
+    public void ClickBookmarkLeft(int page)
+    {
+        pageNum = page;
+        StartCoroutine(TurnPage(false));
+        UpdatePageLeft();
+    }
+
+    public void ClickBookmarkRight(int page)
+    {
+        pageNum = page;
+        StartCoroutine(TurnPage(true));
+        UpdatePageRight();
     }
 }
