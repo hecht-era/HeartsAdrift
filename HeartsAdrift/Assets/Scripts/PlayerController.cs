@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
+        anim = GetComponent<Animator>();
     }
 
     void Update()
