@@ -190,6 +190,8 @@ public class boat : MonoBehaviour
         }
         if (StateManager.Instance.GetState() == GameState.READING)
         {
+            canvas.transform.GetChild(7).gameObject.SetActive(false);
+            canvas.transform.GetChild(8).gameObject.SetActive(true);
             if (_hitBook != null || journal.ReturnJournal())
             {
                 book.transform.position = Vector3.MoveTowards(book.transform.position, frontFace.transform.position, 1.1f * Time.deltaTime);
@@ -225,6 +227,8 @@ public class boat : MonoBehaviour
         }
         if (_lastState == GameState.READING)
         {
+            canvas.transform.GetChild(8).gameObject.SetActive(false);
+            canvas.transform.GetChild(7).gameObject.SetActive(true);
             bookCover.GetComponent<Collider>().enabled = false;
             map.GetComponent<Collider>().enabled = false;
             book.transform.position = Vector3.MoveTowards(book.transform.position, bookPos.transform.position, 1f * Time.deltaTime);
