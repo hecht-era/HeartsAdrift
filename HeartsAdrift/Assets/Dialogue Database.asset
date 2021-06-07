@@ -785,6 +785,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: CustomFieldType_Text
+  - id: 9
+    fields:
+    - title: Name
+      value: TalkedtoAloysius
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   conversations:
   - id: 1
     fields:
@@ -13977,6 +13991,12 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
+      - originConversationID: 22
+        originDialogueID: 0
+        destinationConversationID: 22
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -14042,7 +14062,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["SearchForAl"] == false
+      conditionsString: Variable["SearchForAl"] == false and (Variable["ObtainedTreasure"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -14113,7 +14134,9 @@ MonoBehaviour:
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      conditionsString: Variable["SearchForAl"] == true
+      conditionsString: Variable["SearchForAl"] == true and (Variable["ObtainedTreasure"]
+        == false) and (Variable["TalkedtoAloysius"] == false) and (Variable["ObtainedTreasure"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -14755,7 +14778,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["TalkedtoAloysius"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -14820,19 +14843,20 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["SearchForAl"] == true
+      conditionsString: Variable["SearchForAl"] == true and (Variable["TalkedtoAloysius"]
+        == true) and (Variable["ObtainedTreasure"] == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 746.3549
-        y: 99.99997
+        x: 749.2173
+        y: 166.28314
         width: 160
         height: 30
-    canvasScrollPosition: {x: 49.52588, y: 0}
-    canvasZoom: 0.8200002
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.19000044
   - id: 8
     fields:
     - title: Title
