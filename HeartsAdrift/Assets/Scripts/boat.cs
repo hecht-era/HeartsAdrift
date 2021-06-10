@@ -162,6 +162,7 @@ public class boat : MonoBehaviour
             _isTreasure = false;
             crane.GetComponent<Treasure>().TreasureDone();
             _otherObj.SetActive(false);
+            canvas.transform.GetChild(9).gameObject.SetActive(false);
             StateManager.Instance.SetState(GameState.SAILING);
         }
         
@@ -307,17 +308,26 @@ public class boat : MonoBehaviour
             canvas.transform.GetChild(0).gameObject.SetActive(false);
             _inTrigger = false;
         }
+        else if(other.tag == "Treasure")
+        {
+            canvas.transform.GetChild(9).gameObject.SetActive(false);
+            _inTrigger = false;
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Docking")
+        if (other.tag == "Docking")
         {
             _inTrigger = true;
             _otherObj = other.gameObject;
         }
-        if (other.tag == "Treasure")
+        else if (other.tag == "Treasure")
+        {
+            canvas.transform.GetChild(9).gameObject.SetActive(true);
+            _inTrigger = true;
             _otherObj = other.gameObject;
+        }
     }
 
     public void ResetState()
@@ -352,9 +362,9 @@ public class boat : MonoBehaviour
         Vector3 returnTreasure = new Vector3(_treasureTarget.x, _treasureTarget.y + 6f, _treasureTarget.z);
 
         if(!_gotTreasure)
-            crane.transform.position = Vector3.MoveTowards(crane.transform.position, _treasureTarget, 0.005f);
+            crane.transform.position = Vector3.MoveTowards(crane.transform.position, _treasureTarget, 0.05f);
         else
-            crane.transform.position = Vector3.MoveTowards(crane.transform.position, returnTreasure, 0.005f);
+            crane.transform.position = Vector3.MoveTowards(crane.transform.position, returnTreasure, 0.05f);
         if (crane.transform.position == _treasureTarget)
         {
             _gotTreasure = crane.GetComponent<Treasure>().CollectTreasure();
