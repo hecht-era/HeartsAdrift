@@ -101,7 +101,7 @@ public class boat : MonoBehaviour
     }
     private void Update()
     {
-        if(StateManager.Instance.GetState() != GameState.READING)
+        if(StateManager.Instance.GetState() != GameState.READING && StateManager.Instance.GetState() != GameState.PAUSED && StateManager.Instance.GetState() != GameState.WALKING)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -176,9 +176,9 @@ public class boat : MonoBehaviour
     private void StateHandler()
     {
         if (StateManager.Instance.GetState() == GameState.DOCKING)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, _otherObj.transform.position, Time.deltaTime * 2);
-            transform.forward = Vector3.RotateTowards(transform.forward, _otherObj.transform.right * -1, Time.deltaTime / 2, Time.deltaTime / 2);
+        {            
+            transform.position = Vector3.MoveTowards(transform.position, _otherObj.transform.position, Time.deltaTime * 3);
+            transform.forward = Vector3.RotateTowards(transform.forward, _otherObj.transform.right * -1, Time.deltaTime, Time.deltaTime);
             if (transform.position == _otherObj.transform.position && transform.forward == _otherObj.transform.right * -1)
             {
                 StateManager.Instance.SetState(GameState.DOCKED);
@@ -278,6 +278,7 @@ public class boat : MonoBehaviour
                 player.transform.position = _otherObj.transform.parent.GetChild(0).position;
                 player.transform.rotation = _otherObj.transform.parent.GetChild(0).rotation;
                 player.gameObject.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
                 StateManager.Instance.SetState(GameState.WALKING);
                 player.transform.SetParent(null);
             }
@@ -311,9 +312,12 @@ public class boat : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         if(other.tag == "Docking")
+        {
             _inTrigger = true;
-        _otherObj = other.gameObject;
-
+            _otherObj = other.gameObject;
+        }
+        if (other.tag == "Treasure")
+            _otherObj = other.gameObject;
     }
 
     public void ResetState()

@@ -291,14 +291,12 @@ public class Journal : MonoBehaviour
             UpdateCurrentPages(0);
             pageNum = 0;
             _CPLData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum]);
-            //_CPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
             _CPLData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
             _CPLData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][2]);
             _CPLData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][3]);
             _CPLData.transform.GetChild(7).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][4]);
 
             _CPRData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum + 1]);
-            //_CPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][0]);
             _CPRData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][1]);
             _CPRData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
             _CPRData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][3]);
@@ -337,7 +335,18 @@ public class Journal : MonoBehaviour
             _CPRData.transform.GetChild(10).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
             _CPRData.transform.GetChild(11).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][3]);
 
-            if(pageNum == 2)
+            UpdatePreviousPages(1);
+            _PPLData.transform.GetChild(8).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
+            _PPLData.transform.GetChild(9).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
+            _PPLData.transform.GetChild(10).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][2]);
+            _PPLData.transform.GetChild(11).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][3]);
+
+            _PPRData.transform.GetChild(8).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][0]);
+            _PPRData.transform.GetChild(9).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][1]);
+            _PPRData.transform.GetChild(10).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
+            _PPRData.transform.GetChild(11).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][3]);
+
+            /*if(pageNum == 2)
             {
                 UpdatePreviousPages(0);
                 _PPLData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum - 2]);
@@ -366,7 +375,7 @@ public class Journal : MonoBehaviour
                 _PPRData.transform.GetChild(9).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][1]);
                 _PPRData.transform.GetChild(10).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][2]);
                 _PPRData.transform.GetChild(11).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][3]);
-            }
+            }*/
 
         }
         else if (pageNum == 6) //quests, page 6 (1 page) ------pages 8-9
@@ -387,8 +396,18 @@ public class Journal : MonoBehaviour
             _CPRData.transform.GetChild(14).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][1]);
             _CPRData.transform.GetChild(15).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
 
-            UpdatePreviousPages(1);
-            _PPLData.transform.GetChild(8).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][0]);
+            UpdatePreviousPages(2);
+
+            _PPLData.transform.GetChild(13).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
+            _PPLData.transform.GetChild(14).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
+            _PPLData.transform.GetChild(15).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][2]);
+
+            _PPRData.transform.GetChild(13).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][0]);
+            _PPRData.transform.GetChild(14).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][1]);
+            _PPRData.transform.GetChild(15).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
+            /*
+             *             UpdatePreviousPages(1);
+             * _PPLData.transform.GetChild(8).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][0]);
             _PPLData.transform.GetChild(9).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][1]);
             _PPLData.transform.GetChild(10).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][2]);
             _PPLData.transform.GetChild(11).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][3]);
@@ -396,7 +415,7 @@ public class Journal : MonoBehaviour
             _PPRData.transform.GetChild(8).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][0]);
             _PPRData.transform.GetChild(9).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][1]);
             _PPRData.transform.GetChild(10).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][2]);
-            _PPRData.transform.GetChild(11).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][3]);
+            _PPRData.transform.GetChild(11).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][3]);*/
         }
         else if (pageNum == 8) //treasures, page 7 (1 page) ----pages 10-11
         {
@@ -416,14 +435,23 @@ public class Journal : MonoBehaviour
             _CPRData.transform.GetChild(18).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][1]);
             _CPRData.transform.GetChild(19).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
 
-            UpdatePreviousPages(2);
+            UpdatePreviousPages(3);
+            _PPLData.transform.GetChild(17).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
+            _PPLData.transform.GetChild(18).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
+            _PPLData.transform.GetChild(19).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][2]);
+
+            _PPRData.transform.GetChild(17).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][0]);
+            _PPRData.transform.GetChild(18).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][1]);
+            _PPRData.transform.GetChild(19).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
+
+            /*UpdatePreviousPages(2);
             _PPLData.transform.GetChild(13).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][0]);
             _PPLData.transform.GetChild(14).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][1]);
             _PPLData.transform.GetChild(15).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 2][2]);
 
             _PPRData.transform.GetChild(13).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][0]);
             _PPRData.transform.GetChild(14).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][1]);
-            _PPRData.transform.GetChild(15).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][2]);
+            _PPRData.transform.GetChild(15).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum - 1][2]);*/
         }
         else if (pageNum > 8 || pageNum < 2) //clients, pages 0-1 (2 pages) ----pages 0-3
         {
@@ -437,27 +465,38 @@ public class Journal : MonoBehaviour
             UpdateCurrentPages(0);
             pageNum = 0;
             _CPLData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum]);
-            //_CPLData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][0]);
             _CPLData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
             _CPLData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][2]);
             _CPLData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][3]);
             _CPLData.transform.GetChild(7).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][4]);
 
             _CPRData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum + 1]);
-            //_CPRData.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][0]);
             _CPRData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][1]);
             _CPRData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
             _CPRData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][3]);
             _CPRData.transform.GetChild(7).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][4]);
 
-            UpdatePreviousPages(3);
+            UpdatePreviousPages(0);
+            _PPLData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum]);
+            _PPLData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][1]);
+            _PPLData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][2]);
+            _PPLData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][3]);
+            _PPLData.transform.GetChild(7).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum][4]);
+
+            _PPRData.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().SetText(_clientCurrentList[pageNum + 1]);
+            _PPRData.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][1]);
+            _PPRData.transform.GetChild(3).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][2]);
+            _PPRData.transform.GetChild(4).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][3]);
+            _PPRData.transform.GetChild(7).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[pageNum + 1][4]);
+
+            /*UpdatePreviousPages(3);
             _PPLData.transform.GetChild(17).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[8][0]);
             _PPLData.transform.GetChild(18).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[8][1]);
             _PPLData.transform.GetChild(19).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[8][2]);
 
             _PPRData.transform.GetChild(17).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[9][0]);
             _PPRData.transform.GetChild(18).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[9][1]);
-            _PPRData.transform.GetChild(19).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[9][2]);
+            _PPRData.transform.GetChild(19).gameObject.GetComponent<TextMeshProUGUI>().SetText(journalCurrentData[9][2]);*/
         }
     }
 
