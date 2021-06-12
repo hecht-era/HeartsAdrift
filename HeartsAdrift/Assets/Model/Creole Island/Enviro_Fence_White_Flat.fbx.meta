@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: c7607ae7e7cac934f858d8f16cfd8c11
+guid: 19e5dd092fb707e498889a00d20005c8
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhitePaint_Wood5
+    second: {fileID: 2100000, guid: 7e8ab82c0f157814db5eb10f98f793ff, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

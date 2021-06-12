@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1e04ec4bfdce67246b236fc61a3f1a3a
+guid: e440097675e65364cac5f5aa14eabaab
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Yellow_Cloth
-    second: {fileID: 2100000, guid: 4ee37af6203aad744aae123a0d0684a0, type: 2}
+    second: {fileID: 2100000, guid: f506313fab4f49944a1c4f1f0c981013, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

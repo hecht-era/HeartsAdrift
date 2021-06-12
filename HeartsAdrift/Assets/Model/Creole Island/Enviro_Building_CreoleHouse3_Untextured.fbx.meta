@@ -1,9 +1,39 @@
 fileFormatVersion: 2
-guid: caccd89a7f264434d8c8d63f08bcffd1
+guid: 5791cce51874624429f7e4104b608b8b
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brass_Metal
+    second: {fileID: 2100000, guid: 68b43c31fec1260469356905975ada48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass1
+    second: {fileID: 2100000, guid: b90f1e54b4121c94087b1cd8aa86abfe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GreenPaint_Wood
+    second: {fileID: 2100000, guid: b68a4f1ce1c27e9458d0f0a587a20e24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: InsideGrey
+    second: {fileID: 2100000, guid: 44fd928143e477446b93b1a9a227567f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangePaint_Wood
+    second: {fileID: 2100000, guid: f355f46b7a0c7e2428ce123115838681, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhitePaint_Wood
+    second: {fileID: 2100000, guid: 0f07f6f8005813549ae7a4ec1709d72b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -764,12 +764,12 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -382652638819485698, guid: b6452cae9c152684c8c0e4ceff1c63a5, type: 3}
-  - {fileID: 6844600613994892738, guid: b6452cae9c152684c8c0e4ceff1c63a5, type: 3}
-  - {fileID: -1580535799172915004, guid: b6452cae9c152684c8c0e4ceff1c63a5, type: 3}
-  - {fileID: -8848810374240701247, guid: b6452cae9c152684c8c0e4ceff1c63a5, type: 3}
-  - {fileID: -2550785755823977928, guid: b6452cae9c152684c8c0e4ceff1c63a5, type: 3}
-  - {fileID: 851252078600328622, guid: b6452cae9c152684c8c0e4ceff1c63a5, type: 3}
+  - {fileID: 2100000, guid: abc43d8b9806812419dbc9e04a87e3c8, type: 2}
+  - {fileID: 2100000, guid: 504f2dbd77049214ab8952bd8bc2992e, type: 2}
+  - {fileID: 2100000, guid: e28515340e035e349ac8d710ef3757a6, type: 2}
+  - {fileID: 2100000, guid: b7ceddc983b13ae47a13437742e66c3f, type: 2}
+  - {fileID: 2100000, guid: 3613943ad56778743ab8bac0474fa578, type: 2}
+  - {fileID: 2100000, guid: a91645f936037d94b961a6d775957768, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1009,7 +1009,7 @@ GameObject:
   - component: {fileID: 7927549101645518284}
   - component: {fileID: 1251601331826696794}
   m_Layer: 0
-  m_Name: lady
+  m_Name: Female French Creole NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

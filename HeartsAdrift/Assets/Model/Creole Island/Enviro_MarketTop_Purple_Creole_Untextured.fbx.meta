@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 038a69d07e4156447b9a63cecd1fecfc
+guid: 9f1af2bc8c9bc614183053c48224151a
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Purple_Cloth
+    second: {fileID: 2100000, guid: 603f1a02d6633ed4fb32b4b7cbf44cb2, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

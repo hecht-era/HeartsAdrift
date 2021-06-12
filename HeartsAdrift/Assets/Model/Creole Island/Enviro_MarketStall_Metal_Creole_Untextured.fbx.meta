@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 533d55aa1adb3ab46b74e283a43b936a
+guid: 4d2a9638dea72d14ea32a68689c1792e
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brass_Metal
+    second: {fileID: 2100000, guid: 68b43c31fec1260469356905975ada48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green_Metal
+    second: {fileID: 2100000, guid: c0a9822dc8fc97a488e5319a6763a9f0, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

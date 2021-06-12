@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 840721abf1d4a3749b0d231ca81c5f07
+guid: aebb2bf26d15e1e4a8e5de3e0f8d8d18
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brass_Metal
+    second: {fileID: 2100000, guid: 68b43c31fec1260469356905975ada48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WhitePaint_Wood
+    second: {fileID: 2100000, guid: 0f07f6f8005813549ae7a4ec1709d72b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

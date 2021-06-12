@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: f4c5d23d0546b674e9a5477bd2b4a449
+guid: e74d87f4177bcfb47860d6d569d139ac
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown_Wood
+    second: {fileID: 2100000, guid: 99ed26d8c14e18f40ae9cd9044b7e1fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green_Plant
+    second: {fileID: 2100000, guid: 14e0ae2fc5e7f5b45abddb9bf58f0c32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OffWhite_Ceramic
+    second: {fileID: 2100000, guid: dd2e22cdfd2c64a4682a3ce6d0c2d0be, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

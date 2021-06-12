@@ -1348,11 +1348,11 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2080229356112531691, guid: 840dd65ace80b4049a2d07c8eb59ed9f, type: 3}
-  - {fileID: -1580535799172915004, guid: 840dd65ace80b4049a2d07c8eb59ed9f, type: 3}
-  - {fileID: -8848810374240701247, guid: 840dd65ace80b4049a2d07c8eb59ed9f, type: 3}
-  - {fileID: -2612626239601607672, guid: 840dd65ace80b4049a2d07c8eb59ed9f, type: 3}
-  - {fileID: -2550785755823977928, guid: 840dd65ace80b4049a2d07c8eb59ed9f, type: 3}
+  - {fileID: 2100000, guid: 13d9dcb5387435d43a5ef7aa67aee703, type: 2}
+  - {fileID: 2100000, guid: e28515340e035e349ac8d710ef3757a6, type: 2}
+  - {fileID: 2100000, guid: b7ceddc983b13ae47a13437742e66c3f, type: 2}
+  - {fileID: 2100000, guid: ed8cca7a1267df849a27a823a43f999b, type: 2}
+  - {fileID: 2100000, guid: 3613943ad56778743ab8bac0474fa578, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1622,7 +1622,7 @@ GameObject:
   - component: {fileID: 406030265767170639}
   - component: {fileID: 1120318962943428071}
   m_Layer: 0
-  m_Name: Windmill Isle NPC
+  m_Name: Male Windmill Isle NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

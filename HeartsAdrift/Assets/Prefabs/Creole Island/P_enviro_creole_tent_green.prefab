@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2507089559347125640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5870443396787477015}
+  m_Layer: 0
+  m_Name: P_enviro_creole_tent_green
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5870443396787477015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2507089559347125640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3095048214802381821}
+  - {fileID: 2440317789834879556}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2762810370116666799
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5870443396787477015}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -57.51589
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.436804
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.17403978
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98473865
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -20.046001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.010000001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.010000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_Name
+      value: Enviro_MarketTop_Orange_Creole_Untextured (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8003494900358127127, guid: 7fa18b999178c80479bfd5dce846a9c0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0064d5737473fd74d907863ad3af6792, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7fa18b999178c80479bfd5dce846a9c0, type: 3}
+--- !u!4 &2440317789834879556 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7fa18b999178c80479bfd5dce846a9c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2762810370116666799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3276765165143317526
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5870443396787477015}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.013296004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1780952
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02009597
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.0003975802
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999994
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -0.046000004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.010000001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.010000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4d2a9638dea72d14ea32a68689c1792e,
+        type: 3}
+      propertyPath: m_Name
+      value: Enviro_MarketStall_Metal_Creole_Untextured (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4d2a9638dea72d14ea32a68689c1792e, type: 3}
+--- !u!4 &3095048214802381821 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4d2a9638dea72d14ea32a68689c1792e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3276765165143317526}
+  m_PrefabAsset: {fileID: 0}
