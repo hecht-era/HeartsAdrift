@@ -36,7 +36,7 @@ public class Wendy : MonoBehaviour
         //questState = QuestLog.GetQuestState("Wendy's Love");
         if (questState != QuestState.Unassigned)
         {
-            if (!isQuestGiven)
+            /*if (!isQuestGiven)
             {
                 Journal.Instance.UpdateQuest(0);
                 Journal.Instance.UpdateClientName(0);
@@ -47,7 +47,7 @@ public class Wendy : MonoBehaviour
                 Journal.Instance.UpdateIsland(2, 1);
                 Journal.Instance.UpdateQuest(0);
             }
-            isQuestGiven = true;
+            isQuestGiven = true;*/
             if (TimeCycle.Instance.GetHours() == 8f && !revert)
             {
                 agent.destination = waypoint2.position;

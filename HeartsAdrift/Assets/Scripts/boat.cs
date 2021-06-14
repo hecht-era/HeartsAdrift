@@ -183,7 +183,6 @@ public class boat : MonoBehaviour
             GetComponent<Collider>().enabled = false;
             if (transform.forward == _otherObj.transform.right * -1)
             {
-                Debug.Log("fuuuuuuuuuuuuck");
                 GetComponent<Collider>().enabled = true;
                 StateManager.Instance.SetState(GameState.DOCKED);
             }
@@ -285,6 +284,7 @@ public class boat : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 StateManager.Instance.SetState(GameState.WALKING);
                 player.transform.SetParent(null);
+                canvas.transform.GetChild(7).gameObject.SetActive(false);
             }
             if (Input.GetKeyDown(KeyCode.E) && StateManager.Instance.GetState() == GameState.DOCKED)
                 _lastState = GameState.DOCKED;
@@ -336,6 +336,7 @@ public class boat : MonoBehaviour
     public void ResetState()
     //Resets the camera to the boat, player is put back on boat and disabled
     {
+        canvas.transform.GetChild(7).gameObject.SetActive(true);
         cam.transform.position = cameraPos.position;
         player.transform.position = playerPos.position;
         player.transform.rotation = playerPos.rotation;

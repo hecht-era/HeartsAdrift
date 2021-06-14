@@ -81,6 +81,12 @@ public class Journal : MonoBehaviour
         _PPRData = PPR.transform.GetChild(0).transform.GetChild(0).gameObject;
         _CPLData = CPL.transform.GetChild(0).transform.GetChild(0).gameObject;
         _CPRData = CPR.transform.GetChild(0).transform.GetChild(0).gameObject;
+
+        Lua.RegisterFunction("UpdateClient", this, typeof(Journal).GetMethod("UpdateClient"));
+        Lua.RegisterFunction("UpdateClientName", this, typeof(Journal).GetMethod("UpdateClientName"));
+        Lua.RegisterFunction("UpdateQuest", this, typeof(Journal).GetMethod("UpdateQuest"));
+        Lua.RegisterFunction("UpdateIsland", this, typeof(Journal).GetMethod("UpdateIsland"));
+        Lua.RegisterFunction("UpdateTreasure", this, typeof(Journal).GetMethod("UpdateTreasure"));
     }
 
     void Start()
@@ -143,11 +149,6 @@ public class Journal : MonoBehaviour
 
         UpdatePageRight();
         anim.SetBool("isUsing", false);
-       /*Lua.RegisterFunction("UpdateClient", this, SymbolExtensions.GetMethodInfo(() => UpdateClient(0, 0)));
-        Lua.RegisterFunction("UpdateClientName", this, SymbolExtensions.GetMethodInfo(() => UpdateClientName(0)));
-        Lua.RegisterFunction("UpdateQuest", this, SymbolExtensions.GetMethodInfo(() => UpdateQuest(0)));
-        Lua.RegisterFunction("UpdateIsland", this, SymbolExtensions.GetMethodInfo(() => UpdateIsland(0, 0)));
-        Lua.RegisterFunction("UpdateTreasure", this, SymbolExtensions.GetMethodInfo(() => UpdateTreasure(0)));*/
     }
 
 
@@ -506,29 +507,36 @@ public class Journal : MonoBehaviour
         }
     }
 
-    public void UpdateClient(int client, int index)
+    public void UpdateClient(double client, double index)
     {
-        journalCurrentData[client][index] = journalData[client][index];
+        int i = (int)client;
+        int j = (int)index;
+        journalCurrentData[i][j] = journalData[i][j];
     }
 
-    public void UpdateClientName(int index)
+    public void UpdateClientName(double index)
     {
-        _clientCurrentList[index] = _clientList[index];
+        int i = (int)index;
+        _clientCurrentList[i] = _clientList[i];
     }
 
-    public void UpdateQuest(int index)  
+    public void UpdateQuest(double index)  
     {
-        journalCurrentData[6][index] = journalData[6][index];
+        int i = (int)index;
+        journalCurrentData[6][i] = journalData[6][i];
     }
 
-    public void UpdateTreasure(int index)
+    public void UpdateTreasure(double index)
     {
-        journalCurrentData[8][index] = journalData[7][index];
+        int i = (int)index;
+        journalCurrentData[8][i] = journalData[8][i];
     }
 
-    public void UpdateIsland(int island, int index)
+    public void UpdateIsland(double island, double index)
     {
-        journalCurrentData[island][index] = journalData[8][index];
+        int i = (int)island;
+        int j = (int)index;
+        journalCurrentData[i][j] = journalData[i][j];
     }
 
     private void UpdateCurrentPages(int section)
