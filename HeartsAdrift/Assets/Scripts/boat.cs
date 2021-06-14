@@ -68,7 +68,7 @@ public class boat : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(StateManager.Instance.GetState() != GameState.DOCKED && StateManager.Instance.GetState() != GameState.WALKING)
+        if (StateManager.Instance.GetState() != GameState.DOCKED && StateManager.Instance.GetState() != GameState.WALKING)
         {
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
@@ -83,7 +83,7 @@ public class boat : MonoBehaviour
                 else
                     _isAutoSail = false;
             }
-                Vector3 m_EulerAngleVelocity = new Vector3(0f, h * turnSpeed * Time.deltaTime, 0f);
+            Vector3 m_EulerAngleVelocity = new Vector3(0f, h * turnSpeed * Time.deltaTime, 0f);
             Quaternion deltaRotation = Quaternion.Euler(m_EulerAngleVelocity * Time.deltaTime);
 
             if (StateManager.Instance.GetState() == GameState.SAILING)
@@ -101,7 +101,7 @@ public class boat : MonoBehaviour
     }
     private void Update()
     {
-        if(StateManager.Instance.GetState() != GameState.READING && StateManager.Instance.GetState() != GameState.PAUSED && StateManager.Instance.GetState() != GameState.WALKING)
+        if (StateManager.Instance.GetState() != GameState.READING && StateManager.Instance.GetState() != GameState.PAUSED && StateManager.Instance.GetState() != GameState.WALKING)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
@@ -165,7 +165,7 @@ public class boat : MonoBehaviour
             canvas.transform.GetChild(9).gameObject.SetActive(false);
             StateManager.Instance.SetState(GameState.SAILING);
         }
-        
+
         Vector3[] points = new Vector3[2];
         points[0] = tether.transform.position;
         points[1] = crane.transform.position;
@@ -177,11 +177,14 @@ public class boat : MonoBehaviour
     private void StateHandler()
     {
         if (StateManager.Instance.GetState() == GameState.DOCKING)
-        {            
+        {
             transform.position = Vector3.MoveTowards(transform.position, _otherObj.transform.position, Time.deltaTime * 3);
             transform.forward = Vector3.RotateTowards(transform.forward, _otherObj.transform.right * -1, Time.deltaTime, Time.deltaTime);
-            if (transform.position == _otherObj.transform.position && transform.forward == _otherObj.transform.right * -1)
+            GetComponent<Collider>().enabled = false;
+            if (transform.forward == _otherObj.transform.right * -1)
             {
+                Debug.Log("fuuuuuuuuuuuuck");
+                GetComponent<Collider>().enabled = true;
                 StateManager.Instance.SetState(GameState.DOCKED);
             }
         }
@@ -290,11 +293,11 @@ public class boat : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Docking"  && StateManager.Instance.GetState() == GameState.SAILING)
+        if (other.tag == "Docking" && StateManager.Instance.GetState() == GameState.SAILING)
         {
             canvas.transform.GetChild(0).gameObject.SetActive(true);
         }
-        if(other.tag == "Exit" && StateManager.Instance.GetState() == GameState.UNDOCKING)
+        if (other.tag == "Exit" && StateManager.Instance.GetState() == GameState.UNDOCKING)
         {
             StateManager.Instance.SetState(GameState.SAILING);
             _lastState = GameState.UNDOCKING;
@@ -308,7 +311,7 @@ public class boat : MonoBehaviour
             canvas.transform.GetChild(0).gameObject.SetActive(false);
             _inTrigger = false;
         }
-        else if(other.tag == "Treasure")
+        else if (other.tag == "Treasure")
         {
             canvas.transform.GetChild(9).gameObject.SetActive(false);
             _inTrigger = false;
@@ -331,7 +334,7 @@ public class boat : MonoBehaviour
     }
 
     public void ResetState()
-        //Resets the camera to the boat, player is put back on boat and disabled
+    //Resets the camera to the boat, player is put back on boat and disabled
     {
         cam.transform.position = cameraPos.position;
         player.transform.position = playerPos.position;
@@ -344,12 +347,8 @@ public class boat : MonoBehaviour
         canvas.transform.GetChild(0).gameObject.SetActive(false);
         canvas.transform.GetChild(2).gameObject.SetActive(false);
         _lastState = GameState.WALKING;
-    }
+    } 
 
-    private void ReadBook()
-    {
-
-    }
 
     IEnumerator WaitForDocked() //not needed?
     {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using PixelCrushers.DialogueSystem;
 
 public class Journal : MonoBehaviour
 {
@@ -142,6 +143,11 @@ public class Journal : MonoBehaviour
 
         UpdatePageRight();
         anim.SetBool("isUsing", false);
+       /*Lua.RegisterFunction("UpdateClient", this, SymbolExtensions.GetMethodInfo(() => UpdateClient(0, 0)));
+        Lua.RegisterFunction("UpdateClientName", this, SymbolExtensions.GetMethodInfo(() => UpdateClientName(0)));
+        Lua.RegisterFunction("UpdateQuest", this, SymbolExtensions.GetMethodInfo(() => UpdateQuest(0)));
+        Lua.RegisterFunction("UpdateIsland", this, SymbolExtensions.GetMethodInfo(() => UpdateIsland(0, 0)));
+        Lua.RegisterFunction("UpdateTreasure", this, SymbolExtensions.GetMethodInfo(() => UpdateTreasure(0)));*/
     }
 
 
@@ -510,7 +516,7 @@ public class Journal : MonoBehaviour
         _clientCurrentList[index] = _clientList[index];
     }
 
-    public void UpdateQuest(int index)
+    public void UpdateQuest(int index)  
     {
         journalCurrentData[6][index] = journalData[6][index];
     }

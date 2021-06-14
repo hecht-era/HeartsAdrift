@@ -2520,7 +2520,9 @@ MonoBehaviour:
         Variable["Alert"]="Quest
         : Wendy''s Love"
 
-        Variable["HaveMailForFred"] = true'
+        Variable["HaveMailForFred"] = true
+
+'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
