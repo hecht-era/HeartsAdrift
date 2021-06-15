@@ -512,24 +512,28 @@ public class Journal : MonoBehaviour
         int i = (int)client;
         int j = (int)index;
         journalCurrentData[i][j] = journalData[i][j];
+        UpdatePageRight();
     }
 
     public void UpdateClientName(double index)
     {
         int i = (int)index;
         _clientCurrentList[i] = _clientList[i];
+        UpdatePageRight();
     }
 
     public void UpdateQuest(double index)  
     {
         int i = (int)index;
         journalCurrentData[6][i] = journalData[6][i];
+        UpdatePageRight();
     }
 
     public void UpdateTreasure(double index)
     {
         int i = (int)index;
         journalCurrentData[8][i] = journalData[8][i];
+        UpdatePageRight();
     }
 
     public void UpdateIsland(double island, double index)
@@ -537,6 +541,7 @@ public class Journal : MonoBehaviour
         int i = (int)island;
         int j = (int)index;
         journalCurrentData[i][j] = journalData[i][j];
+        UpdatePageRight();
     }
 
     private void UpdateCurrentPages(int section)
